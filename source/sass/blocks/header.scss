@@ -1,0 +1,18 @@
+.main-header .container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  height: 100vh;
+  position: relative;
+}
+
+.main-header__title {
+  font-family: "Play", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 60px;
+  margin: 0;
+  margin-top: auto;
+  padding-bottom: 75px;
+}

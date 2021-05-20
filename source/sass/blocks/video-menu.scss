@@ -1,0 +1,25 @@
+.video-menu {
+  display: flex;
+  height: 400px;
+}
+
+.video-menu__item {
+  width: 163px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+
+  &--current {
+    flex-grow: 1;
+    width: 712px;
+  }
+}
+
+.video-menu__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

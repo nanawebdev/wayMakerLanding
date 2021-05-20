@@ -1,0 +1,48 @@
+.main-navigation__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.main-navigation__item {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  padding-right: 56px;
+  position: relative;
+
+  &:hover {
+    color: $hover;
+  }
+
+  &:last-child {
+    color: rgba($basic-white, 0.5);
+    display: flex;
+    align-items: center;
+    padding-right: 0;
+  }
+}
+
+.main-navigation__market-link {
+  margin-left: 24px;
+  margin-top: 4px;
+}
+
+.main-navigation__item:nth-child(1)::after,
+.main-navigation__item:nth-child(2)::after {
+  content: "/";
+  position: absolute;
+  top: 0;
+  right: 24px;
+  color: rgba($basic-white, 0.12);
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}

@@ -1,0 +1,27 @@
+.about {
+  background-color: $basic-white;
+  padding-top: 120px;
+  padding-bottom: 180px;
+}
+
+.about__title {
+  color: $basic-black;
+  font-family: "Play", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  margin: 0;
+}
+
+.about__description {
+  color: rgba($basic-black, 0.5);
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
