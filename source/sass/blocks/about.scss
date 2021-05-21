@@ -1,7 +1,7 @@
 .about {
   background-color: $basic-white;
-  padding-top: 120px;
-  padding-bottom: 180px;
+  padding-top: 48px;
+  padding-bottom: 64px;
 }
 
 .about__title {
@@ -9,8 +9,8 @@
   font-family: "Play", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 52px;
+  font-size: 28px;
+  line-height: 32px;
   margin: 0;
 }
 
@@ -19,9 +19,30 @@
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 24px;
   margin: 0;
   padding-top: 20px;
   padding-bottom: 40px;
+}
+
+@media (min-width: $desktop-width) {
+  .about__title {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .about__title br {
+    display: none;
+  }
+
+  .about {
+    padding-top: 120px;
+    padding-bottom: 180px;
+  }
+
+  .about__description {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }

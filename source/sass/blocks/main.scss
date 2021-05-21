@@ -1,7 +1,11 @@
 .main {
-  border-top-left-radius: 80px;
-  border-top-right-radius: 80px;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
   z-index: 20;
   overflow: hidden;
-  // margin-top: -30px;
+
+  @media (min-width: $desktop-width) {
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+  }
 }
