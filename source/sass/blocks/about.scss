@@ -1,29 +1,83 @@
 .about {
   background-color: $basic-white;
   padding-top: 48px;
-  padding-bottom: 64px;
+  padding-bottom: 80px;
 }
 
 .about__title {
-  color: $basic-black;
   font-family: "Play", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
   line-height: 32px;
   margin: 0;
+  color: $light-black;
+  white-space: nowrap;
+}
+
+.activity__title br:nth-child(1) {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .about__description {
-  color: rgba($basic-black, 0.5);
+  color: rgba($light-black, 0.25);
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 20px;
   line-height: 24px;
   margin: 0;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.about__gif {
+  margin: 0 8px;
+}
+
+.about__gif--circle {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.about__gif--oval {
+  border-radius: 100px;
+  width: 50px;
+  height: 32px;
+}
+
+.about__gif--border {
+  position: relative;
+}
+
+// не отображается
+.about__gif--border::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 2px solid $light-blue;
+  top: -2px;
+  left: -2px;
+  border-radius: 50%;
+  // z-index: 1;
+}
+
+.about__gif--border.about__gif {
+  margin: 0 8px;
+  width: 24px;
+  height: 24px;
+}
+
+.about__dots {
+  color: $light-green;
+  font-size: 28px;
+  line-height: 32px;
 }
 
 @media (min-width: $desktop-width) {
@@ -42,7 +96,37 @@
   }
 
   .about__description {
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .about__gif--circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about__gif {
+    margin: 0 20px;
+  }
+
+  .about__gif--oval {
+    width: 168px;
+    height: 88px;
+  }
+
+  .about__dots {
+    font-size: 80px;
+    line-height: 100px;
+  }
+
+  .about__gif--border::after {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+  }
+
+  .about__gif--border.about__gif {
+    width: 84px;
+    height: 84px;
   }
 }

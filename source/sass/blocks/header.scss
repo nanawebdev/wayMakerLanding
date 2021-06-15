@@ -23,11 +23,12 @@
   justify-content: space-between;
 }
 
-.header__links-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 35px;
-}
+// понадобится, когда добавим app store
+// .header__links-wrapper {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   column-gap: 35px;
+// }
 
 // @media (min-width: $tablet-width) {
 // }

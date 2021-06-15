@@ -16,10 +16,7 @@
   font-size: 12px;
   line-height: 24px;
   white-space: nowrap;
-
-  &:hover {
-    color: $hover;
-  }
+  color: $dark-cian;
 
   &:last-child {
     color: rgba($basic-white, 0.5);
@@ -39,14 +36,20 @@
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 12px;
   line-height: 24px;
 }
 
-.main-navigation__item:nth-child(2)::after {
-  display: none;
-}
+// не для мобилки
+// .main-navigation__item:nth-child(2)::after {
+//   display: none;
+// }
 
+.main-navigation__change-lng {
+  background-color: transparent;
+  border: none;
+  color: $basic-white;
+}
 // @media (min-width: $tablet-width) {
 // }
 
