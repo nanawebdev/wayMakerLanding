@@ -1,0 +1,26 @@
+.top-title {
+  background-color: $basic-white;
+  white-space: normal;
+  padding: 40px 37px 28px 27px;
+}
+
+.top-title__text {
+  font-size: 28px;
+  line-height: 32px;
+  color: $light-black;
+  font-weight: 700;
+}
+
+.top-title__text br {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .top-title__text br:nth-child(3) {
+    display: block;
+  }
+
+  .top-title {
+    padding: 120px;
+  }
+}

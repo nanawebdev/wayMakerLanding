@@ -1,0 +1,144 @@
+.bubbles-line-wrapper {
+  position: relative;
+  height: 52px;
+  margin-bottom: 8px;
+
+  @media (min-width: $desktop-width) {
+    height: 76px;
+    margin-bottom: 16px;
+  }
+}
+
+.bubbles-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  height: 100%;
+
+  &-1 {
+    margin-left: -111px;
+
+    .bubble {
+      background-color: $light-blue;
+      border-color: $light-blue;
+      width: 258px;
+
+      @media (min-width: $desktop-width) {
+        width: 427px;
+      }
+    }
+  }
+
+  &-2 {
+    margin-left: 78px;
+
+    @media (min-width: $desktop-width) {
+      margin-left: 131px;
+    }
+
+    .bubble {
+      background-color: $light-pink;
+      border-color: $light-pink;
+      width: 322px;
+
+      @media (min-width: $desktop-width) {
+        width: 533px;
+      }
+    }
+  }
+
+  &-3 {
+    margin-left: 78px;
+
+    @media (min-width: $desktop-width) {
+      margin-left: -100px;
+    }
+
+    .bubble {
+      background-color: $light-black;
+      border-color: $light-black;
+      width: 405px;
+
+      @media (min-width: $desktop-width) {
+        width: 667px;
+      }
+    }
+  }
+
+  &-4 {
+    margin-left: 78px;
+
+    @media (min-width: $desktop-width) {
+      margin-left: 107px;
+    }
+
+    .bubble {
+      background-color: $light-purple;
+      border-color: $light-purple;
+      width: 401px;
+
+      @media (min-width: $desktop-width) {
+        width: 666px;
+      }
+    }
+  }
+
+  &-5 {
+    margin-left: 78px;
+
+    @media (min-width: $desktop-width) {
+      margin-left: -22px;
+    }
+
+    .bubble {
+      background-color: $light-orange;
+      border-color: $light-orange;
+      width: 412px;
+
+      @media (min-width: $desktop-width) {
+        width: 678px;
+      }
+    }
+  }
+}
+
+.bubble {
+  background-color: $light-blue;
+  color: $basic-white;
+  border: 2px solid $light-blue;
+  height: 100%;
+  border-radius: 38px;
+  width: 427px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+
+  &.bubble--empty {
+    background-color: $basic-white;
+    opacity: 0.25;
+  }
+
+  & + & {
+    margin-left: 8px;
+
+    @media (min-width: $desktop-width) {
+      margin-left: 16px;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 400;
+    }
+  }
+}
+
+.bubbles-section {
+  margin-bottom: 48px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
+}

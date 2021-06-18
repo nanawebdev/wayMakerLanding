@@ -1,0 +1,34 @@
+- var headerNavLinks = [{link: "https://waym.app/", name: "Перейти к квестам"},{link: "https://business.html/", name: "Бизнесу"},{link: "./terms.html/", name: "Соглашения"}, {link: "", name: "EN"}, {link: "https://play.google.com/store/apps/details?id=ru.waymaker.app&hl=ru", name: "можно скачать:"}]
+
+header.main-header.wrapper
+  .container
+    .main-header__wrapper
+      svg.logo-icon(width='64' height='64')
+        use(xlink:href='img/sprite.svg#logo')
+
+      .header__links-wrapper
+        a.market-link(href='https://play.google.com/store/apps/details?id=ru.waymaker.app&hl=ru')
+          svg.market-icon(width='24' height='24')
+            use(xlink:href='img/sprite.svg#googleplay')
+
+      .header__switcher
+        button.header__switcher-button.header__switcher-button--active(type='button') RU
+        span /
+        button.header__switcher-button(type='button') EN
+
+    h2.main-header__title= headerTitle
+
+    nav.main-navigation
+      ul.main-navigation__list
+        for i in headerNavLinks
+          li.main-navigation__item
+            a(href=i.link).main-navigation__link=i.name
+          li.main-navigation__item
+            button.main-navigation__change-lng(type='button')
+          li.main-navigation__item
+            a.main-navigation__market-link.market-link(href=i.link)
+            svg.market-icon(width='24' height='24')
+              use(xlink:href='img/sprite.svg#googleplay')
+    .video
+      video.video__media(autoplay='' muted='' loop='')
+        source(src='./media/promo-main-video.webm')

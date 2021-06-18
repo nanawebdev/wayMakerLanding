@@ -1,0 +1,37 @@
+- var footerNavLinks = [{link: "https://waym.app/", name: "Перейти к квестам"},{link: "https://business.html/", name: "Бизнесу"},{link: "./terms.html/", name: "Соглашения"}]
+
+footer.footer
+
+  svg.footer__logo-icon.logo-icon(width='64' height='64')
+    use(xlink:href='img/sprite.svg#dark-logo')
+
+  ul.footer__nav
+    for i in footerNavLinks
+      li.footer__nav-item
+        a(href=i.link).footer__nav-link=i.name
+
+  .footer__links
+    span можно скачать:
+    .divider
+    a.market-link.footer__link(href='https://play.google.com/store/apps/details?id=ru.waymaker.app&hl=ru')
+      svg.market-icon(width='24' height='24')
+        use(xlink:href='img/sprite.svg#googleplay')
+  .footer__links
+    span и подписаться:
+    .divider
+    a.social-link.footer__link(href='https://www.instagram.com/waymaker.official/')
+      svg.social-icon(width='24' height='24')
+        use(xlink:href='img/sprite.svg#Instagram')
+    a.social-link.footer__link(href='https://vk.com/waym_app')
+      svg.social-icon(width='24' height='24')
+        use(xlink:href='img/sprite.svg#VK')
+    a.social-link.footer__link(href='')
+      svg.social-icon(width='24' height='24')
+        use(xlink:href='img/sprite.svg#facebook')
+
+  include feedback
+
+  .footer__copyright
+    | © 2021 WayMaker.
+    br
+    |  Все права защищены

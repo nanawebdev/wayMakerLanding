@@ -14,7 +14,7 @@
   flex-direction: column;
 }
 
-.activity__create {
+.activity__send-us-wrapper {
   background-color: $background-color-2;
   border-bottom-left-radius: 32px;
   border-bottom-right-radius: 32px;
@@ -24,8 +24,8 @@
   margin-top: -32px;
 }
 
-.activity__create,
-.activity__go {
+.activity__send-us-wrapper,
+.activity__opportunity-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,15 +33,15 @@
   line-height: 28px;
 }
 
-.activity__create-text {
+.activity__send-us {
   color: $light-black;
 }
 
-.activity__create-text br:nth-child(5) {
+.activity__send-us br:nth-child(5) {
   display: none;
 }
 
-.activity__go {
+.activity__opportunity-wrapper {
   position: relative;
   flex-grow: 1;
   background-color: $light-black;
@@ -51,11 +51,11 @@
   z-index: 1;
 }
 
-.activity__go-bg {
+.activity__opportunity-wrapper-bg {
   margin-left: auto;
 }
 
-.activity__go-text {
+.activity__opportunity {
   position: absolute;
   color: $basic-white;
   display: grid;
@@ -64,11 +64,51 @@
   bottom: 32px;
 }
 
-.activity__go-text p {
+.activity__opportunity p {
   margin: 0;
 }
 
+@media (min-width: $tablet-width) {
+  .activity__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .activity__opportunity {
+    top: 50%;
+    transform: translateY(-10%);
+  }
+
+  .activity__send-us {
+    white-space: nowrap;
+  }
+
+  .activity__send-us-wrapper {
+    padding-left: 40px;
+  }
+
+  .activity__send-us br {
+    display: none;
+  }
+
+  .activity__send-us br:nth-child(2) {
+    display: block;
+  }
+
+  .activity__send-us br:nth-child(5) {
+    display: block;
+  }
+
+  .activity__wrapper {
+    padding: 0 40px;
+  }
+}
+
 @media (min-width: $desktop-width) {
+  .activity__send-us br {
+    display: block;
+  }
+
   .activity__title {
     font-size: 80px;
     line-height: 100px;
@@ -76,21 +116,22 @@
 
   .activity__wrapper {
     min-height: 640px;
+    padding: 0 120px;
     flex-direction: row;
   }
 
-  .activity__create {
+  .activity__send-us-wrapper {
     padding: 0 40px;
     border-radius: 40px;
   }
 
-  .activity__create,
-  .activity__go {
+  .activity__send-us-wrapper,
+  .activity__opportunity-wrapper {
     font-size: 24px;
     line-height: 32px;
   }
 
-  .activity__go {
+  .activity__opportunity-wrapper {
     padding-left: 40px;
     border-radius: 40px;
     margin-right: 40px;

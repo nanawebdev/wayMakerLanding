@@ -14,6 +14,7 @@ const svgstore = require('gulp-svgstore');
 const del = require('del');
 const sync = require("browser-sync").create();
 const retinize = require('gulp-retinize');
+const pug = require('gulp-pug')
 
 // Styles
 
@@ -44,6 +45,16 @@ const html = () => {
 
 exports.html = html
 
+// PUG
+
+// const compilePug = () => {
+//   return gulp.src("source/*.pug")
+//     .pipe(pug())
+//     .pipe(gulp.dest("build"))
+// }
+
+// exports.compilePug = compilePug
+
 // Server
 
 const server = (done) => {
@@ -73,6 +84,7 @@ const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
+  // gulp.watch("source/*.pug", gulp.series(compilePug, reload));
 }
 
 exports.default = gulp.series(
@@ -160,6 +172,7 @@ const build = gulp.series (
   gulp.parallel(
     styles,
     html,
+    // compilePug,
     scripts,
     sprite,
     createWebp
@@ -175,6 +188,7 @@ exports.default = gulp.series(
   gulp.parallel(
     styles,
     html,
+    // compilePug,
     scripts,
     sprite,
     createWebp
