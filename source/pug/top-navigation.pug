@@ -1,0 +1,12 @@
+nav.top-navigation
+  ul.top-navigation__list
+    for i in topNavLinks
+      li.top-navigation__item
+        a(href=i.link).top-navigation__link #{i.name}
+    li.top-navigation__item
+      button.top-navigation__change-lng(type="button") EN
+    li.top-navigation__item
+      span можно скачать:
+      a.top-navigation__market-link.market-link(href="https://play.google.com/store/apps/details?id=ru.waymaker.app&hl=ru")
+        svg.market-icon(width="24", height="24")
+          use(xlink:href="img/sprite.svg#googleplay")

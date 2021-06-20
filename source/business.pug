@@ -1,6 +1,46 @@
 extends pug/_layout.pug
+block vars
+  -
+    var topNavLinks = [
+      {link: "https://waym.app/", name: "Перейти к квестам"},
+      {link:"./", name:"Игрокам"}
+    ]
+
+    var bottomNavLinks = [
+       {link: "https://waym.app/", name: "Перейти к квестам"}, 
+       {link: "./index.html", name: "Игрокам"}, {id:"toTerms",
+        link: "./terms.html", name: "Соглашения"}
+    ]
+
+    var headerTitle = 'Бизнес - как игра'
+    var examplesTitle = "Примеры геймификации"
 
 block content
-  - var headerTitle = 'Бизнес - как игра'
-  include pug/header
-  h1 Привет
+  .business-page
+    .top-title
+      h3.top-title__text
+        | Добавим игровые элементы в ваш 
+        br
+        | бизнес, тем 
+        br
+        | самым 
+        br
+        | увеличим уровень продаж, лояльность, вовлеченность 
+        br
+        | и узнаваемость бренда
+
+    include pug/slider.pug
+
+    .send-us-title
+      p.send-us-title__text Как это сделать? Очень просто, 
+        a.send-us-title__link(href="#") напишите
+        |  нам! 
+        br
+        | Опишите пожелания к сюжету, или просто расскажите 
+        br
+        | про ваш бизнес - мы пришлем вам предложение за 24 часа!
+
+    include pug/bubbles
+    include pug/examples
+
+  script(src='./js/script.min.js')

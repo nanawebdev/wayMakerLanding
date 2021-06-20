@@ -98,7 +98,7 @@
   z-index: 1;
 }
 
-.content__wrapper {
+.previews__wrapper {
   margin-bottom: 48px;
 }
 
@@ -165,7 +165,7 @@
     display: flex;
   }
 
-  .content__wrapper {
+  .previews__wrapper {
     overflow-x: scroll;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -190,8 +190,9 @@
     line-height: 44px;
   }
 
-  .content__wrapper {
+  .previews__wrapper {
     margin-bottom: 80px;
+    overflow-x: auto;
   }
 
   .content__link {

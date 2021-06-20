@@ -1,0 +1,29 @@
+-
+  var atHomeQuestsData = [
+    {title: "Первый контакт", description: "Невероятная история про гиперреальность.<br>Погрузись в нашу «матрицу» и помоги спасти мир!", image: "./img/preview-image-1.png"},
+    {title: "Перед лицом пандемии", description: "Вам удалось перенестись в начало 2019, когда мир ещё не знал о слове COVID-19. Предотвратишь пандемию?", image: "./img/preview-image-1.png"}
+  ]
+  var inCityQuestsData = [
+    {title: "Интересные места Смоленска", description: "Невероятная история про гиперреальность. Погрузись в нашу «матрицу» и помоги спасти мир!", image: "./img/preview-image-1.png"},
+    {title: "Перед лицом пандемии", description: "Вам удалось перенестись в начало 2019, когда мир ещё не знал о слове COVID-19. Предотвратишь пандемию?", image: "./img/preview-image-1.png"}
+  ]
+
+//- .content
+//-   .content__title #{examplesTitle}
+//-   .content__description !{examplesDescription}
+//-   .previews__wrapper
+//-     .preview
+//-     .content__description А если тебе не сидится на 
+//-     br
+//-     | месте, 
+//-     br
+//-     | то смотри вот сюда
+//-     .preview
+//-   a.examples__link(href="https://waym.app/") Перейти ко всем квестам
+.quests.quests--home
+  for i in atHomeQuestsData
+  .quest__preview.quest__preview--home
+    img.quest__preview-image(alt="Превью квеста", src=i.image)
+    h3.quest__preview-title !{i.description}
+
+

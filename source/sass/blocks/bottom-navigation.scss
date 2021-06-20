@@ -1,0 +1,17 @@
+.bottom-navigation {
+  padding: 0;
+  padding-top: 48px;
+}
+
+.bottom-navigation__item {
+  list-style: none;
+  padding-bottom: 40px;
+}
+
+.bottom-navigation__link {
+  text-decoration: none;
+  color: $light-blue;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}

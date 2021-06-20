@@ -1,0 +1,24 @@
+-
+  var sliderVideos = [
+    {src: "./media/get_coffee.mp4"},
+    {src: "./media/wow_emotion.mp4"},
+    {src: "./media/look_around.mp4"},
+    {src: "./media/qr_scan.mp4"}
+  ]
+
+  var sliderDescriptions = [
+    {description: "Напишем уникальный квест специально для вас"},
+    {description: "Игры приносят положительные эмоции,&nbsp;<br>из-за чего растет средний чек"},
+    {description: "Квест умеет определять локацию игрока <br> — можем привести его к вам!"},
+    {description: "Обыграем особенности локации, и создадим <br> дополнительную стоимость без вложений в инфраструктуру"}
+  ]
+
+.slider
+  .slider__videos
+    for i, index in sliderVideos
+      video.slider__video.video__media(muted, class=(index === 0) ? "slider__video--current" : "")
+        source(src=i.src)
+
+  ul.slider__descriptions
+    for i, index in sliderDescriptions
+      li.slider__description(class=(index === 0) ? "slider__description--current" : "") !{i.description}

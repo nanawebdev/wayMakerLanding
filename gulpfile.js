@@ -47,13 +47,13 @@ exports.html = html
 
 // PUG
 
-// const compilePug = () => {
-//   return gulp.src("source/*.pug")
-//     .pipe(pug())
-//     .pipe(gulp.dest("build"))
-// }
+const compilePug = () => {
+  return gulp.src("source/*.pug")
+    .pipe(pug())
+    .pipe(gulp.dest("build"))
+}
 
-// exports.compilePug = compilePug
+exports.compilePug = compilePug
 
 // Server
 
@@ -83,8 +83,9 @@ const reload= (done) => {
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
-  gulp.watch("source/*.html", gulp.series(html, reload));
-  // gulp.watch("source/*.pug", gulp.series(compilePug, reload));
+  // gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/*.pug", gulp.series(compilePug, reload));
+  gulp.watch("source/pug/*.pug", gulp.series(compilePug, reload));
 }
 
 exports.default = gulp.series(
@@ -171,8 +172,8 @@ const build = gulp.series (
   optimizeImages,
   gulp.parallel(
     styles,
-    html,
-    // compilePug,
+    // html,
+    compilePug,
     scripts,
     sprite,
     createWebp
@@ -187,8 +188,8 @@ exports.default = gulp.series(
   copyImages,
   gulp.parallel(
     styles,
-    html,
-    // compilePug,
+    // html,
+    compilePug,
     scripts,
     sprite,
     createWebp

@@ -1,5 +1,50 @@
 extends pug/_layout.pug
 
+block vars
+  -
+    var topNavLinks = [
+      {link: "https://waym.app/", name: "Перейти к квестам"},
+      {link:"./business.html", name:"Бизнесу"}
+    ]
+    var bottomNavLinks = [
+      {link: "https://waym.app/", name: "Перейти к квестам"},
+      {link: "./business.html", name: "Бизнесу"},
+      {link: "./terms.html", name: "Соглашения"}
+    ]
+
+    var headerTitle = 'Развлечение нового формата'
+    var examplesTitle = 'Гляди, что у нас уже есть'
+    var examplesDescription = 'Проходи квесты <br>не выходя из дома'
+
 block content
-  - var headerTitle = 'Развлечение нового формата'
-  include pug/header
+  .main 
+    .about.wrapper 
+      .container
+        .about__title
+          | Представь, что 
+          img.about__gif.about__gif--circle(src="./media/man.gif", alt="Парень")
+          br
+          | попал 
+          br
+          img.about__gif.about__gif--oval(src="./media/falling-man.gif")
+          | в сюжет 
+          br
+          | невероятной 
+          br
+          | истории 
+          span.about__dots
+          | через 
+          br
+          | телефон 
+          span.about__gif--border
+            img.about__gif--circle(src="./media/woman.gif", alt="Девушка")
+        p.about__description 
+          |Читаешь такой себе текст на экране,  
+          br
+          | нажимаешь на него — а сюжет  
+          br 
+          | разворачивается в реальной жизни!
+        
+      include pug/activity
+      include pug/examples
+
