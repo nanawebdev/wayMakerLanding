@@ -1,6 +1,6 @@
 .about {
   background-color: $basic-white;
-  padding-top: 48px;
+  padding-top: 40px;
   padding-bottom: 80px;
 }
 
@@ -12,10 +12,10 @@
   line-height: 32px;
   margin: 0;
   color: $light-black;
-  // flex-wrap: wrap;
-  // white-space: normal;
-  // display: flex;
-  // align-items: center;
+}
+
+.about__title img {
+  margin: 0;
 }
 
 .about__description {
@@ -26,12 +26,11 @@
   font-size: 20px;
   line-height: 24px;
   margin: 0;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .about__gif {
-  margin: 0 8px;
   vertical-align: middle;
 }
 
@@ -49,7 +48,6 @@
 
 .about__gif--border {
   position: relative;
-  margin: 0 8px;
 }
 
 .about__gif--border::after {
@@ -64,7 +62,6 @@
 }
 
 .about__gif--border .about__circle {
-  margin: 0 8px;
   width: 24px;
   height: 24px;
 }
@@ -76,12 +73,16 @@
   margin-left: 8px;
 }
 
-.about__description br {
-  display: none;
-}
-
-
 @media (min-width: $tablet-width) {
+  .about {
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+
+  .about .container {
+    padding: 0 120px;
+  }
+
   .about__dots {
     font-size: 48px;
     line-height: 56px;
@@ -118,10 +119,6 @@
     font-size: 32px;
     line-height: 40px;
   }
-
-  .activity__title br:nth-child(1) {
-    display: block;
-  }
 }
 
 @media (min-width: $desktop-width) {
@@ -132,12 +129,13 @@
 
   .about {
     padding-top: 120px;
-    padding-bottom: 200px;
   }
 
   .about__description {
     font-size: 40px;
     line-height: 44px;
+    padding-top: 56px;
+    padding-bottom: 85px;
   }
 
   .about__gif--circle {
@@ -170,29 +168,29 @@
     width: 84px;
     height: 84px;
   }
+}
 
-  .about__description br {
+.about__title br:nth-of-type(1) {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
     display: block;
   }
 }
 
-.about__title br:nth-of-type(1) {
+.about__title br:nth-of-type(2) {
   display: block;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
-}
-
-.about__title br:nth-of-type(2) {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-  }
 
   @media (min-width: $desktop-width) {
-    display: block;
+    display: none;
   }
 }
 
@@ -210,12 +208,32 @@
   @media (min-width: $tablet-width) {
     display: block;
   }
-}
-
-.about__title br:nth-of-type(5) {
-  display: block;
 
   @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.about__description br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.about__description br:nth-child(2) {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.activity__title br:nth-child(1) {
+  display: block;
+
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }

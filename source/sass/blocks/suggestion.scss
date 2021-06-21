@@ -1,0 +1,54 @@
+.suggestion {
+  background-color: $basic-white;
+  width: 100%;
+  padding-bottom: 48px;
+}
+
+.suggestion__wrapper {
+  position: relative;
+  flex-grow: 1;
+  background-color: $light-black;
+  border-radius: 32px;
+  overflow: hidden;
+  padding-left: 32px;
+  width: 100%;
+  height: 568px;
+}
+
+.suggestion__text {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  z-index: 1;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: $basic-white;
+}
+
+.suggestion__text p {
+  margin: 0;
+}
+
+.suggestion__text p:nth-of-type(2) {
+  color: rgba($basic-white, 0.5);
+}
+
+.suggestion__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .suggestion__text {
+    top: 50%;
+    transform: translateY(-30%);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .suggestion {
+    display: none;
+  }
+}

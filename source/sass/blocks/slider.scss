@@ -1,4 +1,9 @@
+.slider-wrapper {
+  background-color: $basic-white;
+}
+
 .slider {
+  display: none;
   width: 1200px;
   position: relative;
   border-radius: 32px;
@@ -49,12 +54,18 @@
   transition: all 0.3s;
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
+  .slider-wrapper {
+    margin-top: -4px;
+    padding-bottom: 1px;
+  }
+
   .slider {
+    display: block;
     border-radius: 40px;
     height: 640px;
     width: 1200px;
-    margin-bottom: 80px;
+    margin-bottom: 0;
   }
 
   .slider__videos {
@@ -62,11 +73,11 @@
   }
 
   .slider__descriptions {
-    top: 148px;
+    top: 122px;
     left: 80px;
   }
 
   .slider__description {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 }

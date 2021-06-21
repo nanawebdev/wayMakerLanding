@@ -13,12 +13,15 @@
     {description: "Обыграем особенности локации, и создадим <br> дополнительную стоимость без вложений в инфраструктуру"}
   ]
 
-.slider
-  .slider__videos
-    for i, index in sliderVideos
-      video.slider__video.video__media(muted, class=(index === 0) ? "slider__video--current" : "")
-        source(src=i.src)
 
-  ul.slider__descriptions
-    for i, index in sliderDescriptions
-      li.slider__description(class=(index === 0) ? "slider__description--current" : "") !{i.description}
+.slider-wrapper
+  .wrapper
+    .slider
+      .slider__videos
+        for i, index in sliderVideos
+          video.slider__video.video__media(muted, class=(index === 0) ? "slider__video--current" : "")
+            source(src=i.src)
+
+      ul.slider__descriptions
+        for i, index in sliderDescriptions
+          li.slider__description(class=(index === 0) ? "slider__description--current" : "") !{i.description}

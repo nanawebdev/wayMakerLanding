@@ -6,7 +6,9 @@
   @media (min-width: $desktop-width) {
     padding-left: 120px;
     padding-right: 152px;
-    padding-bottom: 80px;
+    padding-bottom: 120px;
+    padding-top: 80px;
+    text-align: right;
   }
 }
 
@@ -16,6 +18,7 @@
   line-height: 28px;
   font-weight: 700;
   color: $basic-black;
+  margin: 0;
 
   @media (min-width: $desktop-width) {
     font-size: 40px;

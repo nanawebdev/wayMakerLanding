@@ -40,15 +40,6 @@ body {
   font-style: normal;
   color: $basic-white;
   background-color: $basic-black;
-}
-
-.business-page {
-  background-color: $basic-white;
+  height: 100%;
   width: 100%;
-  overflow: hidden;
-  border-radius: 32px 32px 0 0;
-
-  @media (min-width: $desktop-width) {
-    border-radius: 40px 40px 0 0;
-  }
 }

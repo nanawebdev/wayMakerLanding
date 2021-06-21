@@ -1,7 +1,7 @@
 .top-title {
   background-color: $basic-white;
   white-space: normal;
-  padding: 40px 37px 28px 27px;
+  padding: 40px 32px 46px 32px;
 }
 
 .top-title__text {
@@ -9,10 +9,16 @@
   line-height: 32px;
   color: $light-black;
   font-weight: 700;
+  margin: 0;
 }
 
 .top-title__text br {
   display: none;
+}
+
+.top-title__text br:nth-child(2),
+.top-title__text br:nth-child(4) {
+  display: block;
 }
 
 @media (min-width: $desktop-width) {
@@ -20,7 +26,16 @@
     display: block;
   }
 
+  .top-title__text br:nth-child(2) {
+    display: none;
+  }
+
   .top-title {
-    padding: 120px;
+    padding: 120px 120px 85px 120px;
+  }
+
+  .top-title__text {
+    font-size: 40px;
+    line-height: 44px;
   }
 }

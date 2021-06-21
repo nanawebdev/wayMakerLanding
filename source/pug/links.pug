@@ -10,19 +10,21 @@
   ]
 
 .links
-  .links__list
+  .links__wrapper
     span можно скачать:
     .divider
-    for i in marketLinks
-      a.links__link.market-link(href=i.link)
-        svg.market-icon(width="24", height="24")
-          use(xlink:href=i.svgLink)
-  .links__list
+    .links__list
+      for i in marketLinks
+        a.links__link.market-link(href=i.link)
+          svg.market-icon(width="24", height="24")
+            use(xlink:href=i.svgLink)
+  .links__wrapper
     span и подписаться:
     .divider
-    for i in socialLinks
-      a.social-link.links__link(href=i.link)
-        svg.social-icon(width="24", height="24")
-          use(xlink:href=i.svgLink)
+    .links__list
+      for i in socialLinks
+        a.social-link.links__link(href=i.link)
+          svg.social-icon(width="24", height="24")
+            use(xlink:href=i.svgLink)
      
     

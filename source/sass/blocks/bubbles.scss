@@ -1,11 +1,22 @@
 .bubbles-line-wrapper {
   position: relative;
   height: 52px;
-  margin-bottom: 8px;
 
   @media (min-width: $desktop-width) {
     height: 76px;
-    margin-bottom: 16px;
+  }
+}
+
+.bubbles-section {
+  background-color: $basic-white;
+  display: grid;
+  row-gap: 8px;
+  padding-bottom: 48px;
+  overflow: hidden;
+
+  @media (min-width: $desktop-width) {
+    row-gap: 16px;
+    padding-bottom: 120px;
   }
 }
 
@@ -17,7 +28,11 @@
   height: 100%;
 
   &-1 {
-    margin-left: -111px;
+    margin-left: -6px;
+
+    @media (min-width: $desktop-width) {
+      margin-left: -111px;
+    }
 
     .bubble {
       background-color: $light-blue;
@@ -31,7 +46,7 @@
   }
 
   &-2 {
-    margin-left: 78px;
+    margin-left: -80px;
 
     @media (min-width: $desktop-width) {
       margin-left: 131px;
@@ -49,7 +64,7 @@
   }
 
   &-3 {
-    margin-left: 78px;
+    margin-left: 134px;
 
     @media (min-width: $desktop-width) {
       margin-left: -100px;
@@ -67,7 +82,7 @@
   }
 
   &-4 {
-    margin-left: 78px;
+    margin-left: -77px;
 
     @media (min-width: $desktop-width) {
       margin-left: 107px;
@@ -85,7 +100,7 @@
   }
 
   &-5 {
-    margin-left: 78px;
+    margin-left: 93px;
 
     @media (min-width: $desktop-width) {
       margin-left: -22px;
@@ -132,13 +147,5 @@
       line-height: 28px;
       font-weight: 400;
     }
-  }
-}
-
-.bubbles-section {
-  margin-bottom: 48px;
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 80px;
   }
 }

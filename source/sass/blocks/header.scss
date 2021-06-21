@@ -1,9 +1,13 @@
 .main-header .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   position: relative;
   padding-top: 32px;
+}
+
+.main-header {
+  overflow: hidden;
 }
 
 .main-header__title {
@@ -12,7 +16,6 @@
   font-weight: 700;
   margin: 0;
   margin-top: auto;
-  padding-bottom: 32px;
   font-size: 28px;
   line-height: 32px;
 }
@@ -24,6 +27,11 @@
 }
 
 @media (min-width: $tablet-width) {
+  .main-header .container {
+    padding: 80px;
+    padding-bottom: 0;
+  }
+
   .main-header__title {
     font-size: 48px;
     line-height: 56px;
@@ -40,7 +48,10 @@
 
 @media (min-width: $desktop-width) {
   .main-header .container {
+    padding: 120px;
     padding-top: 40px;
+    padding-bottom: 0;
+    height: 810px;
   }
 
   .main-header__title {

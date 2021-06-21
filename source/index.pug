@@ -4,6 +4,7 @@ block vars
   -
     var topNavLinks = [
       {link: "https://waym.app/", name: "Перейти к квестам"},
+      {link: "https://waym.app/", name: "Квесты"},
       {link:"./business.html", name:"Бизнесу"}
     ]
     var bottomNavLinks = [
@@ -19,12 +20,11 @@ block vars
 
 block content
   .main 
-    .about.wrapper 
+    .about
       .container
         .about__title
           span Представь, что 
           img.about__gif.about__gif--circle(src="./media/man.gif", alt="Парень")
-          br
           span попал 
           br
           img.about__gif.about__gif--oval(src="./media/falling-man.gif")
@@ -41,9 +41,11 @@ block content
             img.about__gif--circle(src="./media/woman.gif", alt="Девушка")
 
         p.about__description 
-          |Читаешь такой себе текст на экране,  
+          | Читаешь такой себе текст на экране,  
           br
-          | нажимаешь на него — а сюжет  
+          | нажимаешь 
+          br
+          | на него — а сюжет  
           br 
           | разворачивается в реальной жизни!
         
