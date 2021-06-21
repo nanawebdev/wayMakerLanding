@@ -13,31 +13,33 @@ block vars
     ]
 
     var headerTitle = 'Развлечение нового формата'
-    var examplesTitle = 'Гляди, что у нас уже есть'
-    var examplesDescription = 'Проходи квесты <br>не выходя из дома'
+    var contentTitle = 'Гляди, что у нас уже есть'
+    var contentTopText = 'Проходи квесты <br>не выходя из дома'
+    var contentMiddleText = 'А если тебе не сидится на <br>  месте, <br> то смотри вот сюда'
 
 block content
   .main 
     .about.wrapper 
       .container
         .about__title
-          | Представь, что 
+          span Представь, что 
           img.about__gif.about__gif--circle(src="./media/man.gif", alt="Парень")
           br
-          | попал 
+          span попал 
           br
           img.about__gif.about__gif--oval(src="./media/falling-man.gif")
-          | в сюжет 
+          span в сюжет 
           br
-          | невероятной 
+          span невероятной 
           br
-          | истории 
-          span.about__dots
-          | через 
+          span истории 
+          span.about__dots ... 
+          span через 
           br
-          | телефон 
-          span.about__gif--border
+          span телефон 
+          span.about__gif.about__gif--border
             img.about__gif--circle(src="./media/woman.gif", alt="Девушка")
+
         p.about__description 
           |Читаешь такой себе текст на экране,  
           br
@@ -46,5 +48,4 @@ block content
           | разворачивается в реальной жизни!
         
       include pug/activity
-      include pug/examples
-
+      include pug/content

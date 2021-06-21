@@ -66,6 +66,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .top-navigation {
+    padding-top: 34px;
+    padding-bottom: 0;
+  }
+
   .top-navigation__list {
     padding-bottom: 116px;
   }
