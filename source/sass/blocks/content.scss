@@ -110,7 +110,7 @@
   padding: 48px 0;
 
   &:hover {
-    color: $dark-cian;
+    color: $basic-white;
   }
 }
 
@@ -118,10 +118,13 @@
   display: none;
 }
 
+.content .container {
+  padding: 0;
+}
+
 @media (min-width: $tablet-width) {
   .content {
-    padding: 80px;
-    padding-left: 80px;
+    padding-top: 80px;
     padding-bottom: 80px;
     margin: 0;
     border-radius: 40px 40px 0 0;
@@ -184,7 +187,7 @@
   .content__wrapper {
     overflow-x: scroll;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: max-content max-content;
     grid-template-rows: 1fr;
     column-gap: 24px;
   }
@@ -239,7 +242,10 @@
   }
 
   .content {
-    padding: 120px;
     border-radius: 80px 80px 0 0;
+  }
+
+  .content .container {
+    padding: 0 120px;
   }
 }

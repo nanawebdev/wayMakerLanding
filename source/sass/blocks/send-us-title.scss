@@ -1,11 +1,10 @@
 .send-us-title {
   background-color: $basic-white;
   padding: 0 32px;
-  padding-bottom: 48px;
+  padding-bottom: 58px;
+  margin-top: -10px;
 
   @media (min-width: $desktop-width) {
-    padding-left: 120px;
-    padding-right: 152px;
     padding-bottom: 120px;
     padding-top: 80px;
     text-align: right;

@@ -22,8 +22,8 @@
 @media (min-width: $desktop-width) {
   .examples {
     border-radius: 80px 80px 0 0;
-    padding: 120px;
     padding-bottom: 30px;
+    padding-top: 120px;
   }
 
   .examples__title {
@@ -35,7 +35,7 @@
 
   .examples .content__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: max-content max-content;
   }
 
   .examples .content-link {

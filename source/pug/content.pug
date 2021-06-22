@@ -9,25 +9,27 @@
   ]
 
 .content
-  .content__title !{contentTitle}
-  .content__top-description.content__description !{contentTopText}
+  .wrapper
+    .container
+      .content__title !{contentTitle}
+      .content__top-description.content__description !{contentTopText}
 
-  .content__wrapper
-    for i in atHomeContent
-      .content__preview.content__preview--home
-        img.content__preview-image(alt="Превью квеста", src=i.image)
-        h3.content__preview-title !{i.title}
-        p.content__preview-text !{i.description}
+      .content__wrapper
+        for i in atHomeContent
+          .content__preview.content__preview--home
+            img.content__preview-image(alt="Превью квеста", src=i.image)
+            h3.content__preview-title !{i.title}
+            p.content__preview-text !{i.description}
 
-    .content__middle-description.content__description !{contentMiddleText}
-  .content__wrapper
-    for i in inCityContent
-      .content__preview.content__preview--city
-        img.content__preview-image(alt="Превью квеста", src=i.image)
-        h3.content__preview-title !{i.title}
-        p.content__preview-text !{i.description}
+      .content__middle-description.content__description !{contentMiddleText}
+      .content__wrapper
+        for i in inCityContent
+          .content__preview.content__preview--city
+            img.content__preview-image(alt="Превью квеста", src=i.image)
+            h3.content__preview-title !{i.title}
+            p.content__preview-text !{i.description}
 
-  a.content-link(href="https://waym.app/") Перейти ко всем квестам
+      a.content-link(href="https://waym.app/") Перейти ко всем квестам
 
 
 
