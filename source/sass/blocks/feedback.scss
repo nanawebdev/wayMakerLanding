@@ -65,7 +65,7 @@
   padding-bottom: 28px;
   padding-top: 28px;
   outline: none;
-  color: rgba(40, 40, 44, 0.5);
+  color: $light-black;
 
   &::placeholder {
     color: rgba(40, 40, 44, 0.5);
@@ -161,5 +161,9 @@
       line-height: 24px;
       font-weight: 400;
     }
+  }
+
+  textarea.feedback__input {
+    padding-top: 45px;
   }
 }
