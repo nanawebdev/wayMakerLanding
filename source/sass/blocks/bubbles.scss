@@ -30,6 +30,7 @@
 
   &-1 {
     margin-left: -6px;
+    animation: toLeft 5s linear infinite;
 
     @media (min-width: $desktop-width) {
       margin-left: -111px;
@@ -48,6 +49,7 @@
 
   &-2 {
     margin-left: -80px;
+    animation: toRight 5s linear infinite;
 
     @media (min-width: $desktop-width) {
       margin-left: 131px;
@@ -66,6 +68,7 @@
 
   &-3 {
     margin-left: 134px;
+    animation: toLeft 5s linear infinite;
 
     @media (min-width: $desktop-width) {
       margin-left: -100px;
@@ -84,6 +87,7 @@
 
   &-4 {
     margin-left: -77px;
+    animation: toRight 5s linear infinite;
 
     @media (min-width: $desktop-width) {
       margin-left: 107px;
@@ -102,6 +106,7 @@
 
   &-5 {
     margin-left: 93px;
+    animation: toLeft 5s linear infinite;
 
     @media (min-width: $desktop-width) {
       margin-left: -22px;
@@ -148,5 +153,33 @@
       line-height: 28px;
       font-weight: 400;
     }
+  }
+}
+
+@keyframes toLeft {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  50% {
+    transform: translateX(-55%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes toRight {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  50% {
+    transform: translateX(-45%);
+  }
+
+  100% {
+    transform: translateX(-50%);
   }
 }
