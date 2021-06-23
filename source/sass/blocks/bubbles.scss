@@ -30,7 +30,7 @@
 
   &-1 {
     margin-left: -6px;
-    animation: toLeft 5s linear infinite;
+    animation: toLeft 10s linear infinite;
 
     @media (min-width: $desktop-width) {
       margin-left: -111px;
@@ -49,7 +49,7 @@
 
   &-2 {
     margin-left: -80px;
-    animation: toRight 5s linear infinite;
+    animation: toRight 10s linear infinite;
 
     @media (min-width: $desktop-width) {
       margin-left: 131px;
@@ -68,7 +68,7 @@
 
   &-3 {
     margin-left: 134px;
-    animation: toLeft 5s linear infinite;
+    animation: toLeft 10s linear infinite;
 
     @media (min-width: $desktop-width) {
       margin-left: -100px;
@@ -87,7 +87,7 @@
 
   &-4 {
     margin-left: -77px;
-    animation: toRight 5s linear infinite;
+    animation: toRight 10s linear infinite;
 
     @media (min-width: $desktop-width) {
       margin-left: 107px;
@@ -106,7 +106,7 @@
 
   &-5 {
     margin-left: 93px;
-    animation: toLeft 5s linear infinite;
+    animation: toLeft 10s linear infinite;
 
     @media (min-width: $desktop-width) {
       margin-left: -22px;
@@ -162,7 +162,7 @@
   }
 
   50% {
-    transform: translateX(-55%);
+    transform: translateX(-53%);
   }
 
   100% {
@@ -176,7 +176,7 @@
   }
 
   50% {
-    transform: translateX(-45%);
+    transform: translateX(-47%);
   }
 
   100% {
