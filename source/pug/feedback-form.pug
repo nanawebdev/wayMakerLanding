@@ -1,10 +1,10 @@
 form.footer__feedback.feedback
   fieldset
-    input.feedback__input(type='text' placeholder='Имя')
-    input.feedback__input(type='text' placeholder='Вопрос, предложение')
-    input.feedback__input(type='email' placeholder='Email')
+    input.feedback__input(type='text' placeholder='Имя', required, maxlength="50", name="userName")
+    textarea.feedback__input(type='text' placeholder='Вопрос, предложение', required, maxlength="1000", name="userFeedback")
+    input.feedback__input(type='email' placeholder='Email', required, maxlength="50", name="userEmail")
     .feedback__capcha
-      input.feedback__capcha-input(type='text' placeholder='Код с картинки')
+      input.feedback__capcha-input(type='text' placeholder='Код с картинки', required, maxlength="10")
       .feedback__capcha-window
     button.feedback__submit(type='submit')
       span.feedback__submit-name Отправить
