@@ -12,6 +12,8 @@
 .activity__wrapper {
   display: flex;
   flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .activity__send-us-wrapper {
@@ -48,22 +50,28 @@
   background-color: $light-black;
   border-radius: 32px;
   overflow: hidden;
-  padding-left: 32px;
   z-index: 1;
   width: 100%;
   height: 568px;
 }
 
 .activity__opportunity-wrapper-bg {
+  @media (max-width: 320px) {
+    width: 100%;
+  }
+}
+
+.picture-wrapper {
   margin-left: auto;
 }
 
-.activity__opportunity {
+.activity__opportunity-text {
   position: absolute;
   color: $basic-white;
   display: grid;
   grid-template-rows: max-content max-content;
   bottom: 32px;
+  left: 32px;
 }
 
 .activity__opportunity p {
@@ -80,7 +88,7 @@
     line-height: 56px;
   }
 
-  .activity__opportunity {
+  .activity__opportunity-text {
     top: 50%;
     transform: translateY(-33%);
   }

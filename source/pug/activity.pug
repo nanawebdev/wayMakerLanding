@@ -8,7 +8,7 @@
   
   .activity__wrapper.wrapper
     .activity__opportunity-wrapper
-      .activity__opportunity
+      .activity__opportunity-text
         p Возможность прожить 
           br
           | в реальности сюжет  
@@ -18,7 +18,10 @@
         p Ты сам выбираешь, 
           br
           | что тебе подойдет 
-      img.activity__opportunity-wrapper-bg(src="./img/video-block-bg.png", alt="парень")
+      .picture-wrapper
+        picture
+          source(srcset="./img/activity-bg-768.png", alt="парень", media="(min-width: 768px")
+          img.activity__opportunity-wrapper-bg(src="./img/activity-bg-320.png", alt="парень")
 
     .activity__send-us-wrapper
       .activity__send-us
