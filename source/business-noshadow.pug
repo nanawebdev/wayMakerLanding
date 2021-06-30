@@ -16,6 +16,12 @@ block vars
     var headerTitle = 'Бизнес - как игра'
     var examplesTitle = "Примеры геймификации"
     var pageClass = 'business-page'
+
+block customStyles
+  style.
+    .slider::after {
+      box-shadow: none;
+    }
     
 block content
   .main(class=pageClass)

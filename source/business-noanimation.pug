@@ -16,6 +16,16 @@ block vars
     var headerTitle = 'Бизнес - как игра'
     var examplesTitle = "Примеры геймификации"
     var pageClass = 'business-page'
+
+block customStyles
+  style.
+    .bubbles-line-1,
+    .bubbles-line-2,
+    .bubbles-line-3,
+    .bubbles-line-4,
+    .bubbles-line-5 {
+      animation: none;
+    }
     
 block content
   .main(class=pageClass)
