@@ -1,24 +1,25 @@
 .slider-wrapper {
   background-color: $basic-white;
+  height: 600px;
+  transform: translateZ(0);
 }
 
 .slider {
-  display: none;
-  width: 1200px;
+  width: 100%;
   position: relative;
   border-radius: 32px;
   overflow: hidden;
   margin: 0 auto;
-  margin-bottom: 48px;
+  height: 100%;
 }
 
 .slider::after {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  width: 70%;
-  height: 100%;
+  width: 100%;
+  height: 50px;
   background-color: $light-black;
   box-shadow: 0 0 70px 120px $light-black;
 }
@@ -26,58 +27,83 @@
 .slider__descriptions {
   position: absolute;
   color: rgba($basic-white, 0.5);
-  top: 0;
-  left: 0;
   list-style: none;
   z-index: 1;
   font-size: 24px;
   line-height: 32px;
   padding: 0;
+  bottom: 32px;
+  top: auto;
+  left: 32px;
 }
 
 .slider__video {
   display: none;
-  width: 1200px;
-  transform: translateX(45%);
+}
+
+.slider__videos {
+  height: 100%;
 }
 
 .slider__video--current {
   display: flex;
 }
 
-.slider__description--current {
-  color: $basic-white;
-}
-
 .slider__description {
+  font-family: "Roboto", sans-serif;
   cursor: pointer;
   transition: all 0.3s;
+  will-change: color;
+  display: none;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.slider__description--current {
+  color: $basic-white;
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__descriptions {
+    left: 80px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .slider-wrapper {
-    margin-top: -4px;
-    padding-bottom: 10px;
+    // margin-top: -4px;
+    // padding-bottom: 10px;
+    height: 640px;
   }
 
   .slider {
     display: block;
     border-radius: 40px;
-    height: 640px;
     width: 1200px;
     margin-bottom: 0;
   }
 
-  .slider__videos {
-    height: 640px;
-  }
-
   .slider__descriptions {
     top: 122px;
-    left: 80px;
   }
 
   .slider__description {
     margin-bottom: 40px;
+    display: block;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .slider__video {
+    transform: translateX(45%);
+    width: 1200px;
+  }
+
+  .slider::after {
+    top: 0;
+    width: 70%;
+    height: auto;
   }
 }

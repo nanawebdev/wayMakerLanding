@@ -18,7 +18,8 @@ block vars
     var pageClass = 'business-page'
     
 block content
-  main.main(class=pageClass)
+  //- main.main(class=pageClass)
+  .main(class=pageClass)
     .top-title
       .wrapper
         h3.top-title__text.container.wrapper
@@ -32,7 +33,6 @@ block content
           br
           | и узнаваемость бренда
 
-    include pug/suggestion
     include pug/slider
 
     .send-us-title
@@ -47,6 +47,3 @@ block content
 
     include pug/bubbles
     include pug/examples
-    
-
-  script(src='./js/script.min.js')

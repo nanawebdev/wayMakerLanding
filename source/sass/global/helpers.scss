@@ -18,6 +18,12 @@ body,
   overflow: hidden;
 }
 
+@media (max-width: 320px) {
+  .content .container {
+    padding: 0;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .container {
     padding-left: 80px;

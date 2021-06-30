@@ -12,7 +12,7 @@
 .activity__wrapper {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  // width: 320px;
   margin: 0 auto;
 }
 
@@ -56,12 +56,13 @@
 }
 
 .activity__opportunity-wrapper-bg {
-  @media (max-width: 320px) {
+  @media (max-width: $tablet-width) {
     width: 100%;
   }
 }
 
 .picture-wrapper {
+  width: 100%;
   margin-left: auto;
 }
 
@@ -72,6 +73,7 @@
   grid-template-rows: max-content max-content;
   bottom: 32px;
   left: 32px;
+  right: 32px;
 }
 
 .activity__opportunity p {
@@ -79,6 +81,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .picture-wrapper {
+    width: 320px;
+  }
+
   .activity__opportunity-wrapper {
     padding-left: 40px;
   }
@@ -120,6 +126,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .picture-wrapper {
+    width: 360px;
+  }
+
   .activity__send-us br {
     display: block;
   }

@@ -1,9 +1,9 @@
 -
   var sliderVideos = [
-    {src: "./media/get_coffee.mp4"},
-    {src: "./media/wow_emotion.mp4"},
-    {src: "./media/look_around.mp4"},
-    {src: "./media/qr_scan.mp4"}
+    {src: "./media/get_coffee.mp4", poster: "./img/get_coffee.png"},
+    {src: "./media/wow_emotion.mp4", poster: "./img/wow_emotion.png"},
+    {src: "./media/look_around.mp4", poster: "./img/look_around.png"},
+    {src: "./media/qr_scan.mp4", poster: "./img/qr_scan.png"}
   ]
 
   var sliderDescriptions = [
@@ -19,7 +19,7 @@
     .slider
       .slider__videos
         for i, index in sliderVideos
-          video.slider__video.video__media(muted, class=(index === 0) ? "slider__video--current" : "")
+          video.slider__video.video__media(muted, poster=i.poster, class=(index === 0) ? "slider__video--current" : "")
             source(src=i.src)
 
       ul.slider__descriptions
