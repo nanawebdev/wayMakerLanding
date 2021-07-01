@@ -1,4 +1,7 @@
 header.main-header(class=pageClass)
+  .video
+    video.video__media(autoplay, muted, loop, playsinline)
+      source(src='./media/promo-main-video.webm')
   .container.wrapper
     .main-header__wrapper
       svg.logo-icon(width='64' height='64')
@@ -14,6 +17,3 @@ header.main-header(class=pageClass)
     h2.main-header__title= headerTitle
 
     include top-navigation
-    .video
-      video.video__media(autoplay, muted, loop, playsinline)
-        source(src='./media/promo-main-video.webm')
