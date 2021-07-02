@@ -1,11 +1,14 @@
 -
   var atHomeContent = [
-    {title: "Первый контакт", description: "Невероятная история про гиперреальность.<br>Погрузись в нашу «матрицу» и помоги спасти мир!", image: "./img/preview-image-1.png"},
-    {title: "Перед лицом пандемии", description: "Вам удалось перенестись в начало 2019, когда мир ещё не знал о слове COVID-19. Предотвратишь пандемию?", image: "./img/preview-image-1.png"}
+    {title: "Первый контакт", description: "Невероятная история про гиперреальность. Погрузись в нашу «матрицу» и помоги спасти мир!", image: "./img/first-contact-image.jpg", link: "https://web.waym.app/quest/6"},
+    {title: "Перед лицом пандемии", description: "Вам удалось перенестись в начало 2019, когда мир ещё не знал о слове COVID-19. Предотвратишь пандемию?", image: "./img/in-front-of-pandemia.jpg", link: "https://web.waym.app/quest/78"},
+    {title: "Симулятор президента", description: "Почувствуй власть! Демократия или тирания - решать только тебе", image: "./img/simulator-of-president.jpg", link: "https://web.waym.app/quest/82"},
+    {title: "Тайна Геоторекса", description: "Тебя внедряют как агента в средневековое общество. что может пойти не так?", image: "./img/secret-of-Geotorex.jpg", link: "https://web.waym.app/quest/8"}
   ]
   var inCityContent = [
-    {title: "Интересные места Смоленска", description: "Невероятная история про гиперреальность. Погрузись в нашу «матрицу» и помоги спасти мир!", image: "./img/preview-image-1.png"},
-    {title: "Перед лицом пандемии", description: "Вам удалось перенестись в начало 2019, когда мир ещё не знал о слове COVID-19. Предотвратишь пандемию?", image: "./img/preview-image-1.png"}
+    {title: "Интересные места Смоленска", description: "Интерактивная история, которая проведет по лучшим местам города! Погулять, поесть, пообщаться", image: "./img/places-of-Smolensk.jpg", link: "https://web.waym.app/quest/69"},
+    {title: "Художник - Невидимка", description: "Странное творится в Парке Горького, и только ты можешь разобраться с этим", image: "./img/bread-crumbs-of-history.jpg", link: "https://web.waym.app/quest/149"},
+    {title: "Хлебные крошки истории", description: "Прогулка по ВДНХ сквозь время", image: "./img/places-of-Smolensk.jpg", link: "https://web.waym.app/quest/148"}
   ]
 
 .content
@@ -16,18 +19,22 @@
 
       .content__wrapper
         for i in atHomeContent
-          .content__preview.content__preview--home
-            img.content__preview-image(alt="Превью квеста", src=i.image)
-            h3.content__preview-title !{i.title}
-            p.content__preview-text !{i.description}
+          a.content__preview.content__preview--home(href=i.link)
+            .content__image-wrapper
+              img.content__preview-image(alt="Превью квеста", src=i.image)
+            .content__text-wrapper
+              h3.content__preview-title !{i.title}
+              p.content__preview-text !{i.description}
 
       .content__middle-description.content__description !{contentMiddleText}
       .content__wrapper
         for i in inCityContent
-          .content__preview.content__preview--city
-            img.content__preview-image(alt="Превью квеста", src=i.image)
-            h3.content__preview-title !{i.title}
-            p.content__preview-text !{i.description}
+          a.content__preview.content__preview--city
+            .content__image-wrapper
+              img.content__preview-image(alt="Превью квеста", src=i.image)
+            .content__text-wrapper
+              h3.content__preview-title !{i.title}
+              p.content__preview-text !{i.description}
 
       a.content-link(href="https://waym.app/") Перейти ко всем квестам
 
