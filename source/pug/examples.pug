@@ -1,7 +1,8 @@
 -
   var examplesData = [
-     {title: "Интересные места Смоленска", description: "Невероятная история про гиперреальность. Погрузись в нашу «матрицу» и помоги спасти мир!", image: "./img/preview-image-1.png"},
-    {title: "Перед лицом пандемии", description: "Вам удалось перенестись в начало 2019, когда мир ещё не знал о слове COVID-19. Предотвратишь пандемию?", image: "./img/preview-image-1.png"}
+    {title: "Квест для гостей города Смоленска", description: "Водит&nbsp;по&nbsp;достопримечательностям города, после чего предлагает зайти перекусить в кафе &laquo;Маяковский&raquo;", image: "./img/places-of-Smolensk.jpg", link: "https://web.waym.app/quest/69"},
+    {title: "Захватывающий сюжет в Парке Горького", description: "Детективная история, которая увлечет игрока прямо от входа в парк, и по ходу сюжета приведет в кафе музея &laquo;Гараж&raquo;", image: "./img/ghost-painter.jpg", link: "https://web.waym.app/quest/149"},
+    {title: "Прогулка по ВДНХ", description: "Квест, который расскажет об истории места, а так же покажет как оно выглядело в прошлом.", image: "./img/bread-crumbs-of-history.jpg", link: "https://web.waym.app/quest/148"}
   ]
 
 .examples-wrapper
@@ -10,8 +11,10 @@
         .examples__title !{examplesTitle}
         .content__wrapper
           for i in examplesData
-            .content__preview.content__preview--home
-              img.content__preview-image(alt="Превью квеста", src=i.image)
-              h3.content__preview-title !{i.title}
-              p.content__preview-text !{i.description}
+            a.content__preview.content__preview--home(href=i.link)
+              .content__image-wrapper
+                img.content__preview-image(alt="Превью квеста", src=i.image)
+              .content__text-wrapper
+                h3.content__preview-title !{i.title}
+                p.content__preview-text !{i.description}
         a.content-link(href="https://web.waym.app/quests") Перейти ко всем квестам
