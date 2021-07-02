@@ -7,8 +7,8 @@
   ]
   var inCityContent = [
     {title: "Интересные места Смоленска", description: "Интерактивная история, которая проведет по лучшим местам города! Погулять, поесть, пообщаться", image: "./img/places-of-Smolensk.jpg", link: "https://web.waym.app/quest/69"},
-    {title: "Художник - Невидимка", description: "Странное творится в Парке Горького, и только ты можешь разобраться с этим", image: "./img/bread-crumbs-of-history.jpg", link: "https://web.waym.app/quest/149"},
-    {title: "Хлебные крошки истории", description: "Прогулка по ВДНХ сквозь время", image: "./img/places-of-Smolensk.jpg", link: "https://web.waym.app/quest/148"}
+    {title: "Художник - Невидимка", description: "Странное творится в Парке Горького, и только ты можешь разобраться с этим", image: "./img/ghost-painter.jpg", link: "https://web.waym.app/quest/149"},
+    {title: "Хлебные крошки истории", description: "Прогулка по ВДНХ сквозь время", image: "./img/bread-crumbs-of-history.jpg", link: "https://web.waym.app/quest/148"}
   ]
 
 .content
@@ -29,7 +29,7 @@
       .content__middle-description.content__description !{contentMiddleText}
       .content__wrapper
         for i in inCityContent
-          a.content__preview.content__preview--city
+          a.content__preview.content__preview--city(href=i.link)
             .content__image-wrapper
               img.content__preview-image(alt="Превью квеста", src=i.image)
             .content__text-wrapper
