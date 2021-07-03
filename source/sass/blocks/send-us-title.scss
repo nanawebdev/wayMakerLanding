@@ -1,9 +1,9 @@
 .send-us-title {
   background-color: $basic-white;
-  padding: 0 32px;
+  padding-right: 32px;
   padding-bottom: 58px;
   padding-top: 48px;
-  // margin-top: -10px;
+  padding-left: 0;
 
   @media (min-width: $desktop-width) {
     padding-bottom: 120px;
@@ -13,7 +13,7 @@
 }
 
 .send-us-title__text {
-  font-family: "Roboto", sans-serif;
+  font-family: "Play", sans-serif;
   font-size: 20px;
   line-height: 28px;
   font-weight: 700;

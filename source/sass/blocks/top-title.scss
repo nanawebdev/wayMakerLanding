@@ -1,10 +1,11 @@
 .top-title {
   background-color: $basic-white;
   white-space: normal;
-  padding: 40px 32px 46px 32px;
+  padding: 40px 32px 48px 32px;
 }
 
 .top-title__text {
+  padding: 0;
   font-size: 28px;
   line-height: 32px;
   color: $light-black;
@@ -31,8 +32,9 @@
   }
 
   .top-title {
+    padding: 0;
     padding-top: 120px;
-    padding-bottom: 85px;
+    padding-bottom: 80px;
   }
 
   .top-title__text {
