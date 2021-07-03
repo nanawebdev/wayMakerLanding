@@ -44,9 +44,9 @@ const videoBgEl = document.querySelector('.main-header .video__media')
 window.addEventListener('scroll', () => {
   if (window.pageYOffset >= mainOffsetTop) {
     videoBgEl.pause()
-    videoWrapper.style.display = 'none'
+    // videoWrapper.style.display = 'none'
   } else {
     videoBgEl.play()
-    videoWrapper.style.display = ''
+    // videoWrapper.style.display = ''
   }
 })
