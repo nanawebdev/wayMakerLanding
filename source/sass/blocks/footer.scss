@@ -40,13 +40,14 @@
   .footer {
     border-radius: 40px 40px 0 0;
     margin-top: -50px;
-    padding-bottom: 40px;
+    padding-bottom: 48px;
+    padding-top: 80px;
   }
 
   .footer .container,
   .footer .feedback,
   .footer__copyright {
-    padding: 0 32px;
+    padding: 0 80px;
   }
 
   .footer__copyright {

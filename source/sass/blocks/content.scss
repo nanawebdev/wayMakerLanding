@@ -19,9 +19,8 @@
 }
 
 .content__description {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
+  font-family: "Play", sans-serif;
+  font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   margin: 0;
@@ -76,8 +75,7 @@
   width: 100%;
   position: relative;
 
-
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     height: 320px;
   }
 }
@@ -91,6 +89,7 @@
 }
 
 .content__preview-title {
+  font-family: "Play", sans-serif;
   font-size: 20px;
   line-height: 24px;
   margin: 0;
@@ -105,6 +104,11 @@
   color: rgba($basic-white, 0.5);
   margin: 0;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
 .content__text-wrapper {
@@ -122,6 +126,8 @@
 }
 
 .content-link {
+  font-size: 16px;
+  line-height: 24px;
   display: flex;
   justify-content: center;
   text-decoration: none;
@@ -167,6 +173,16 @@
 }
 
 @media (min-width: $tablet-width) {
+  .content__preview-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .content__preview {
+    width: 580px;
+    height: 520px;
+  }
+
   .content__wrapper {
     column-gap: 24px;
     row-gap: 24px;
@@ -223,13 +239,8 @@
 
 @media (min-width: $desktop-width) {
   .content__preview-text {
-    font-size: 20px;
-    line-height: 28px;
-  }
-
-  .content__preview-title {
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 22px;
+    line-height: 32px;
   }
 
   .content__wrapper {
@@ -268,6 +279,7 @@
   .content-link {
     font-size: 24px;
     line-height: 28px;
+    font-weight: 500;
     padding-top: 120px;
     padding-bottom: 80px;
   }
