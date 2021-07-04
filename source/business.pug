@@ -9,8 +9,8 @@ block vars
 
     var bottomNavLinks = [
        {link: "https://web.waym.app/quests", name: "Перейти к квестам"}, 
-       {link: "./index.html", name: "Игрокам"}, {id:"toTerms",
-        link: "./terms.html", name: "Соглашения"}
+       {link: "./index.html", name: "Игрокам"}, 
+       {link: "./terms.html", name: "Соглашения"}
     ]
 
     var headerTitle = 'Бизнес - как игра'
@@ -28,7 +28,7 @@ block content
   .main(class=pageClass)
     .top-title
       .wrapper
-        h3.top-title__text.container.wrapper
+        h3.top-title__text.container.wrapper(text="topTitleBusiness")
           | Добавим игровые элементы в ваш 
           br
           | бизнес, тем 
@@ -43,9 +43,8 @@ block content
 
     .send-us-title
       .wrapper
-        p.send-us-title__text.container Как это сделать? Очень просто, 
-          a.send-us-title__link(href="#send-us") напишите
-          |  нам! 
+        p.send-us-title__text.container(text="sendUsTitle") Как это сделать? Очень просто, 
+          a.send-us-title__link(href="#send-us") напишите нам! 
           br
           | Опишите пожелания к сюжету, или просто расскажите 
           br

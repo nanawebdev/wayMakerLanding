@@ -50,3 +50,19 @@ window.addEventListener('scroll', () => {
     videoWrapper.style.display = ''
   }
 })
+
+let engDictionary = {
+  canDownload : 'download',
+  topTitleBusiness : 'Let&#39;s add game elements to your <br> business, sowe will <br> increase the level, loyalty, engagement <br> and brand awareness',
+  sendUsTitle : 'Write to us! <br> Describe your wishes for the plot, or just tell us <br> about your business - we will send you an offer in 24 hours!',
+  aboutDescription : 'You read such a text on the screen, <br> click on it - and the plot <br> unfolds in real life!',
+  imagineThat : 'Imagine that',
+  hit : 'hit',
+  intoThePlot : 'into the plot',
+  incredible : 'incredible',
+  story : 'story',
+  through : 'through',
+  yourSmartphone : 'your smartphone'
+}
+
+const enSwitcher = document.querySelector('.language-switcher-button--en')
