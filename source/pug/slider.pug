@@ -7,10 +7,10 @@
   ]
 
   var sliderDescriptions = [
-    {description: "Напишем уникальный квест специально для вас"},
-    {description: "Игры приносят положительные эмоции,&nbsp;<br>из-за чего растет средний чек"},
-    {description: "Квест умеет определять локацию игрока <br> — можем привести его к вам!"},
-    {description: "Обыграем особенности локации, и создадим <br> дополнительную стоимость без вложений в инфраструктуру"}
+    {description: "Напишем уникальный квест специально для вас", key: 'weWillWrite'},
+    {description: "Игры приносят положительные эмоции,&nbsp;<br>из-за чего растет средний чек", key: 'gamesBring'},
+    {description: "Квест умеет определять локацию игрока <br> — можем привести его к вам!", key: 'questKnows'},
+    {description: "Обыграем особенности локации, и создадим <br> дополнительную стоимость без вложений в инфраструктуру", key: 'wePlayWithLocation'}
   ]
 
 
@@ -24,4 +24,4 @@
 
       ul.slider__descriptions
         for i, index in sliderDescriptions
-          li.slider__description(class=(index === 0) ? "slider__description--current" : "") !{i.description}
+          li.slider__description(text=i.key, class=(index === 0) ? "slider__description--current" : "") !{i.description}

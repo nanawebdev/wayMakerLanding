@@ -11,7 +11,7 @@
 
 .links
   .links__wrapper
-    span можно скачать:
+    span(text="canDownload") можно скачать:
     .divider
     .links__list
       for i in marketLinks
@@ -19,7 +19,7 @@
           svg.market-icon(width="24", height="24")
             use(xlink:href=i.svgLink)
   .links__wrapper
-    span и подписаться:
+    span(text="subscribe") и подписаться:
     .divider
     .links__list
       for i in socialLinks

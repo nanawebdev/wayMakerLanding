@@ -3,20 +3,20 @@ extends pug/_layout.pug
 block vars
   -
     var topNavLinks = [
-      {link: "https://web.waym.app/quests", name: "Перейти к квестам"},
-      {link: "https://web.waym.app/quests", name: "Квесты"},
-      {link:"./business.html", name:"Бизнесу"}
+      {link: 'https://web.waym.app/quests', name: 'Перейти к квестам' , key: 'goToQuests'},
+      {link: 'https://web.waym.app/quests', name: 'Квесты', key : 'quests'},
+      {link:'./business.html', name:'Бизнесу', key: 'business'}
     ]
     var bottomNavLinks = [
-      {link: "https://web.waym.app/quests", name: "Перейти к квестам"},
-      {link: "./business.html", name: "Бизнесу"},
-      {link: "./terms.html", name: "Соглашения"}
+      {link: 'https://web.waym.app/quests', name: 'Перейти к квестам', key: 'goToQuests'},
+      {link: './business.html', name: 'Бизнесу', key: 'business'},
+      {link: './terms.html', name: 'Соглашения', key : 'conditions'}
     ]
 
-    var headerTitle = 'Развлечение нового формата'
-    var contentTitle = 'Гляди, что у нас уже есть'
-    var contentTopText = 'Проходи квесты <br>не выходя из дома'
-    var contentMiddleText = 'А если тебе не сидится на <br>  месте, <br> то смотри вот сюда'
+    var headerTitle = {text: 'Развлечение нового формата', key: 'headerTitleIndex'}
+    var contentTitle = {text: 'Гляди, что у нас уже есть', key: 'contentTitle'}
+    var contentTopText = {text: 'Проходи квесты <br>не выходя из дома', key: 'contentTopText'}
+    var contentMiddleText = {text: 'А если тебе не сидится на <br>  месте, <br> то смотри вот сюда', key : 'contentMiddleText' }
 
 block content
   .main 

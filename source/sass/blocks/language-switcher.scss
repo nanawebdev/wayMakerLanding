@@ -1,0 +1,55 @@
+
+.main-header__wrapper .language-switcher {
+  display: none;
+}
+
+.top-navigation__language-switcher .language-switcher-button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: $basic-white;
+  border: none;
+  background-color: transparent;
+  display: flex;
+}
+
+.top-navigation__language-switcher .language-switcher-button--active {
+  display: none;
+}
+
+.top-navigation__language-switcher span {
+  display: none;
+}
+
+
+@media (min-width: $tablet-width) {
+  .main-header__wrapper .language-switcher {
+    display: flex;
+  }
+
+  .language-switcher-button {
+    border: none;
+    background-color: transparent;
+    color: rgba($basic-white, 0.5);
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:active {
+      color: $basic-white;
+    }
+  }
+
+  .language-switcher span {
+    color: rgba($basic-white, 0.5);
+    margin: 0 8px;
+    transform: translateY(4px);
+  }
+
+  .language-switcher-button--active {
+    color: $basic-white;
+  }
+}

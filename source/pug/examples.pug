@@ -1,20 +1,20 @@
 -
   var examplesData = [
-    {title: "Квест для гостей города Смоленска", description: "Водит&nbsp;по&nbsp;достопримечательностям города, после чего предлагает зайти перекусить в кафе &laquo;Маяковский&raquo;", image: "./img/places-of-Smolensk.jpg", link: "https://web.waym.app/quest/69"},
-    {title: "Захватывающий сюжет в Парке Горького", description: "Детективная история, которая увлечет игрока прямо от входа в парк, и по ходу сюжета приведет в кафе музея &laquo;Гараж&raquo;", image: "./img/ghost-painter.jpg", link: "https://web.waym.app/quest/149"},
-    {title: "Прогулка по ВДНХ", description: "Квест, который расскажет об истории места, а так же покажет как оно выглядело в прошлом.", image: "./img/bread-crumbs-of-history.jpg", link: "https://web.waym.app/quest/148"}
+    {title: 'Квест для гостей города Смоленска', titleKey: 'forGuestsOfSmolenskTitle', key: 'forGuestsOfSmolensk', description: 'Водит&nbsp;по&nbsp;достопримечательностям города, после чего предлагает зайти перекусить в кафе &laquo;Маяковский&raquo;', image: './img/places-of-Smolensk.jpg', link: 'https://web.waym.app/quest/69'},
+    {title: 'Захватывающий сюжет в Парке Горького', titleKey: 'intoParkGorkogoTitle', key: 'intoParkGorkogo', description: 'Детективная история, которая увлечет игрока прямо от входа в парк, и по ходу сюжета приведет в кафе музея &laquo;Гараж&raquo;', image: './img/ghost-painter.jpg', link: 'https://web.waym.app/quest/149'},
+    {title: 'Прогулка по ВДНХ', titleKey: 'WalkAroundVDNKhTitle', key: 'WalkAroundVDNKh', description: 'Квест, который расскажет об истории места, а так же покажет как оно выглядело в прошлом.', image: './img/bread-crumbs-of-history.jpg', link: 'https://web.waym.app/quest/148'}
   ]
 
 .examples-wrapper
     .examples
       .wrapper.container
-        .examples__title !{examplesTitle}
+        .examples__title(text="examplesTitle") !{examplesTitle.text}
         .content__wrapper
           for i in examplesData
             a.content__preview.content__preview--home(href=i.link)
               .content__image-wrapper
                 img.content__preview-image(alt="Превью квеста", src=i.image)
               .content__text-wrapper
-                h3.content__preview-title !{i.title}
-                p.content__preview-text !{i.description}
-        a.content-link(href="https://web.waym.app/quests") Перейти ко всем квестам
+                h3.content__preview-title(text=i.titleKey) !{i.title}
+                p.content__preview-text(text=i.key) !{i.description}
+        a.content-link(href="https://web.waym.app/quests", text="contentLink") Перейти ко всем квестам

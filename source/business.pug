@@ -2,19 +2,19 @@ extends pug/_layout.pug
 block vars
   -
     var topNavLinks = [
-      {link: "https://web.waym.app/quests", name: "Перейти к квестам"},
-      {link: "https://web.waym.app/quests", name: "Квесты"},
-      {link:"./", name:"Игрокам"}
+      {link: 'https://web.waym.app/quests', name: 'Перейти к квестам', key: 'goToQuests'},
+      {link: 'https://web.waym.app/quests', name: 'Квесты', key : 'quests'},
+      {link:'./', name:'Игрокам', key: 'forPlayers'}
     ]
 
     var bottomNavLinks = [
-       {link: "https://web.waym.app/quests", name: "Перейти к квестам"}, 
-       {link: "./index.html", name: "Игрокам"}, 
-       {link: "./terms.html", name: "Соглашения"}
+       {link: 'https://web.waym.app/quests', name: 'Перейти к квестам', key: 'goToQuests'}, 
+       {link: './index.html', name: 'Игрокам', key: 'forPlayers'}, 
+       {link: './terms.html', name: 'Соглашения', key : 'conditions'}
     ]
 
-    var headerTitle = 'Бизнес - как игра'
-    var examplesTitle = "Примеры геймификации"
+    var headerTitle = {text:'Бизнес - как игра', key: 'headerTitleBusiness'}
+    var examplesTitle = {text: 'Примеры геймификации', key: 'examplesTitle'}
     var pageClass = 'business-page'
 
 block customStyles
