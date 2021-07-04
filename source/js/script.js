@@ -68,7 +68,7 @@ const engDictionary = {
    intoThePlot: 'into the plot',
    incredible: 'incredible',
    story: 'story',
-   through: 'through',
+   through: 'through ',
    yourSmartphone: 'your smartphone',
   //
   // Текст напишите нам
@@ -169,6 +169,8 @@ const switchLanguage = (lang) => {
       el.innerHTML = dict[el.getAttribute('text')]
     }
   })
+
+  localStorage.setItem('lang', lang)
 }
 
 
@@ -188,4 +190,12 @@ ruSwitchers.forEach((el) => {
   })
 })
 
+const savedLanguage = localStorage.getItem('lang')
 
+if (savedLanguage === 'en') {
+  switchLanguage('en')
+  ruSwitchers.forEach(sw => sw.classList.remove('language-switcher-button--active'))
+  enSwitchers.forEach((el) => {
+    el.classList.add('language-switcher-button--active')
+  })
+}
