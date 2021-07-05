@@ -59,12 +59,35 @@
 .activity__opportunity-wrapper-bg {
   @media (max-width: $tablet-width) {
     width: 100%;
+    object-fit: cover;
   }
 }
 
-.picture-wrapper {
+.media-wrapper {
   width: 100%;
   margin-left: auto;
+}
+
+.media-wrapper__video {
+  position: relative;
+}
+
+.media-wrapper__video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(190deg, rgba(16, 16, 16, 0) 0%, #101010 100%);
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(270deg, rgba(16, 16, 16, 0) 0%, #101010 100%);
+  }
+
+  // @media (min-width: $desktop-width) {
+  //   background: linear-gradient(270deg, rgba(16, 16, 16, 0) 0%, #101010 100%);
+  // }
 }
 
 .activity__opportunity-text {
@@ -75,6 +98,7 @@
   bottom: 32px;
   left: 32px;
   right: 32px;
+  z-index: 1;
 }
 
 .activity__opportunity p {
@@ -82,7 +106,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .picture-wrapper {
+  .media-wrapper {
     width: 320px;
   }
 
@@ -127,7 +151,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .picture-wrapper {
+  .media-wrapper {
     width: 360px;
   }
 

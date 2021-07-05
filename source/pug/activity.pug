@@ -18,10 +18,12 @@
         p(text="youChoose") Ты сам выбираешь, 
           br
           | что тебе подойдет 
-      .picture-wrapper
-        picture
-          source(srcset="./img/activity-bg-768.png", alt="парень", media="(min-width: 768px")
-          img.activity__opportunity-wrapper-bg(src="./img/activity-bg-320.png", alt="парень")
+      .media-wrapper
+        //- picture
+        //-   source(srcset="./img/activity-bg-768.png", alt="парень", media="(min-width: 768px")
+        //-   img.activity__opportunity-wrapper-bg(src="./img/activity-bg-320.png", alt="парень")
+        .media-wrapper__video
+          video.activity__opportunity-wrapper-bg(autoplay, muted, loop, playsinline, preload="auto", src="./media/b2c-bg.mp4", type="video/mp4", width="360", height="640")
 
     .activity__send-us-wrapper
       .activity__send-us(text="activitySendUs")
