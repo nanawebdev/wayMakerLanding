@@ -43,12 +43,15 @@ block content
 
     .send-us-title
       .wrapper
-        p.send-us-title__text.container(text="sendUsTitle") Как это сделать? Очень просто, 
-          a.send-us-title__link(href="#send-us") напишите нам! 
-          br
-          | Опишите пожелания к сюжету, или просто расскажите 
-          br
-          | про ваш бизнес - мы пришлем вам предложение за 24 часа!
+        p.send-us-title__text.container
+          span(text="howThatDo") Как это сделать? Очень просто, 
+          a.send-us-title__link(href="#send-us")
+            span(text="writeTo") напишите 
+          span(text="writeToUs") нам!
+            br
+          span(text="describeWishes") Опишите пожелания к сюжету, или просто расскажите 
+            br
+          span(text="aboutBusiness") про ваш бизнес - мы пришлем вам предложение за 24 часа!
 
     include pug/bubbles
     include pug/examples

@@ -230,11 +230,3 @@
     display: none;
   }
 }
-
-.activity__title br:nth-child(1) {
-  display: block;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}

@@ -5,7 +5,9 @@
   transform: translateZ(0);
   top: 0;
   left: 0;
-  bottom: -80px;
+  // bottom: -80px; // почему-то страница каждый раз скроллится на 80px при открытии, хз
+  bottom: 0;
+  // height: calc(100% + 80px);
   z-index: -2;
 }
 
