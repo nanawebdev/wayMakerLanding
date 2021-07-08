@@ -41,8 +41,6 @@ const mainOffsetTop = document.querySelector('.main').offsetTop
 const videoWrapper = document.querySelector('.video')
 const videoBgEl = document.querySelector('.main-header .video__media')
 
-videoWrapper.style.bottom = '-80px';
-
 window.addEventListener('scroll', () => {
   if (window.pageYOffset >= mainOffsetTop) {
     videoBgEl.pause()
