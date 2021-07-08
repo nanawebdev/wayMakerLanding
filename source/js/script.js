@@ -149,9 +149,14 @@ const engDictionary = {
   forPlayers: 'For players',
   // Навигация в футере
   conditions: 'Conditions',
+  feedbackSuccess: 'Sent Successfully, we will contact to you soon',
+  feedbackFailure: 'Something went wrong, try again later',
 }
 
-const ruDictionary = {}
+const ruDictionary = {
+  feedbackSuccess: 'Успешно отправлено, мы скоро свяжемся с вами',
+  feedbackFailure: 'Что-то пошло не так, попробуйте позже',
+}
 
 const enSwitchers = document.querySelectorAll('.language-switcher-button--en')
 const ruSwitchers = document.querySelectorAll('.language-switcher-button--ru')
@@ -204,4 +209,37 @@ if (savedLanguage === 'en') {
   enSwitchers.forEach((el) => {
     el.classList.add('language-switcher-button--active')
   })
+}
+
+/**
+ * Обработчик нажатия на кнопку "Отправить" - обратная связь
+ */
+function callback () {
+  const nameInput = document.getElementById('nameInput').value
+  const offerInput = document.getElementById('offerInput').value
+  const emailInput = document.getElementById('emailInput').value
+
+  const dict = localStorage.getItem('lang') === 'en' ? engDictionary : ruDictionary
+  let settings = {
+    async: false,
+    type: 'GET',
+    url: 'https://data.waym.app/common/feedback',
+    data: {
+      name: nameInput,
+      offer: offerInput,
+      email: emailInput
+    }
+  };
+  $.ajax(settings).done(function(response) {
+    alert(dict['feedbackSuccess'])
+  }).fail(function(data){
+    alert(dict['feedbackFailure'])
+  });
+}
+
+let form = document.querySelector('.feedback')
+if(form.addEventListener){
+  form.addEventListener("submit", callback, false);
+}else if(form.attachEvent){
+  form.attachEvent('onsubmit', callback);
 }
