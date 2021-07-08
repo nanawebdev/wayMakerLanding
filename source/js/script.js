@@ -222,7 +222,6 @@ function callback () {
   const dict = localStorage.getItem('lang') === 'en' ? engDictionary : ruDictionary
   let settings = {
     async: true,
-    headers: {  'Access-Control-Allow-Origin': '*' },
     type: 'GET',
     url: 'https://data.waym.app/common/feedback',
     data: {
