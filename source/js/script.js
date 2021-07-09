@@ -79,7 +79,7 @@ const engDictionary = {
   incredible: ' in an engaging ',
   story: ' story ',
   through: ' through ',
-  yourSmartphone: ' your phone',
+  yourSmartphone: ' your phone ',
   //
   // Описание приложения на главной (Читаешь такой себе текст на экране)
   aboutDescription: 'You are reading the text on the screen, <br> tapping on it and the plot <br> starts unfolding in the reality!',
