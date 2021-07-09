@@ -56,48 +56,6 @@
   }
 }
 
-// .feedback__capcha-input {
-//   border: none;
-//   padding-left: 24px;
-//   padding-bottom: 28px;
-//   padding-top: 28px;
-//   outline: none;
-//   color: $light-black;
-
-//   &::placeholder {
-//     color: rgba(40, 40, 44, 0.5);
-//     font-size: 16px;
-//     line-height: 24px;
-//     font-weight: 400;
-//     transition: opacity 0.3s;
-//   }
-
-//   &:focus::placeholder {
-//     opacity: 0;
-//   }
-// }
-
-// .feedback__capcha {
-//   height: 80px;
-//   position: relative;
-//   border: 2px solid $background-color-2;
-//   border-radius: 20px;
-//   margin-top: -30px;
-//   overflow: hidden;
-//   z-index: 4;
-//   background-color: $basic-white;
-// }
-
-// .feedback__capcha-window {
-//   position: absolute;
-//   width: 80px;
-//   height: 40px;
-//   background-color: $background-color-3;
-//   top: 18px;
-//   right: 18px;
-//   z-index: 5;
-// }
-
 .feedback__submit {
   height: 80px;
   width: 100%;
@@ -125,19 +83,6 @@
     margin: 0;
   }
 
-  // .feedback__capcha {
-  //   font-size: 20px;
-  //   line-height: 24px;
-  //   padding-top: 18px;
-  //   height: 120px;
-  //   margin-top: -40px;
-  // }
-
-  // .feedback__capcha-window {
-  //   width: 160px;
-  //   height: 80px;
-  // }
-
   .feedback__input {
     height: 160px;
     padding-top: 16px;
@@ -154,17 +99,6 @@
       font-weight: 400;
     }
   }
-
-  // .feedback__capcha-input {
-  //   padding-left: 38px;
-  //   padding-top: 30px;
-
-  //   &::placeholder {
-  //     font-size: 20px;
-  //     line-height: 24px;
-  //     font-weight: 400;
-  //   }
-  // }
 
   textarea.feedback__input {
     padding-top: 45px;

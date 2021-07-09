@@ -1,9 +1,22 @@
 const sliderVideos = document.querySelectorAll('.slider__video')
+const sliderVideoStopButton = document.querySelectorAll('.slider__video-control')
+
+
+const stopVideo = () => {
+  sliderVideoStopButton.addEventListener("touchstart", handleStart, false); {
+    sliderVideos[i].pause()
+  }
+  sliderVideoStopButton.addEventListener("touchend", handleEnd, false); {
+    sliderVideos[i].play()
+  }
+}
+
 
 if (sliderVideos.length > 1) {
   const sliderDescriptions = document.querySelectorAll('.slider__description')
 
   sliderVideos[0].play()
+
   for (let i = 0; i < 4; i++) {
     sliderVideos[i].addEventListener('ended', () => {
       sliderVideos[i].classList.remove('slider__video--current')
@@ -14,23 +27,21 @@ if (sliderVideos.length > 1) {
       sliderVideos[nextIndex].classList.add('slider__video--current')
       sliderDescriptions[nextIndex].classList.add('slider__description--current')
       sliderVideos[nextIndex].play()
+
+      stopVideo()
     })
   }
 }
 
 if (sliderVideos.length === 1) {
   const sliderDescriptions = document.querySelectorAll('.slider__description')
-
   sliderVideos[0].play()
-
   let currentDescriptionIndex = 0
-
   function activateNextDescription() {
     const nextIndex = currentDescriptionIndex + 1 === 4 ? 0 : currentDescriptionIndex + 1
     sliderDescriptions[currentDescriptionIndex].classList.remove('slider__description--current')
     sliderDescriptions[nextIndex].classList.add('slider__description--current')
     currentDescriptionIndex = nextIndex
-
     setTimeout(activateNextDescription, 3000)
   }
 
@@ -88,7 +99,7 @@ const engDictionary = {
   youChoose: 'You can choose <br> what suits you best',
   // Текст с Главной (Написать свой квест и заработать на этом.Если ты напишешь интересный квест — сразу переведём деньги!)
   activitySendUs: 'Write your own quest <br> and make money with it. <br> If you create <br> an interesting quest, <br> we&#39;ll send you <br> money <br> right away!',
-   // Тексты в слайдере
+  // Тексты в слайдере
   weWillWrite: 'We will write a unique quest especially for you',
   gamesBring: 'Games bring positive emotions &nbsp; <br> because of which the average check grows',
   questKnows: 'The quest knows how to determine the location of the player <br> - we can bring him to you!',

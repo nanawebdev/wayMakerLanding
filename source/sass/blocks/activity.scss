@@ -13,7 +13,6 @@
 .activity__wrapper {
   display: flex;
   flex-direction: column;
-  // width: 320px;
   margin: 0 auto;
 }
 
@@ -84,10 +83,6 @@
   @media (min-width: $tablet-width) {
     background: linear-gradient(270deg, rgba(16, 16, 16, 0) 0%, #101010 100%);
   }
-
-  // @media (min-width: $desktop-width) {
-  //   background: linear-gradient(270deg, rgba(16, 16, 16, 0) 0%, #101010 100%);
-  // }
 }
 
 .activity__opportunity-text {
