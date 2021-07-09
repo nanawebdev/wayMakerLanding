@@ -7,13 +7,15 @@ const sliderVideoStopButton = document.getElementById('sliderButton')
  */
 let currentVideoIndex = 0;
 
-sliderVideoStopButton.addEventListener("touchstart", () => {
-  sliderVideos[currentVideoIndex].pause();
-});
+if (sliderVideoStopButton) {
+  sliderVideoStopButton.addEventListener("touchstart", () => {
+    sliderVideos[currentVideoIndex].pause();
+  });
 
-sliderVideoStopButton.addEventListener("touchend", () => {
-  sliderVideos[currentVideoIndex].play();
-});
+  sliderVideoStopButton.addEventListener("touchend", () => {
+    sliderVideos[currentVideoIndex].play();
+  });
+}
 
 if (sliderVideos.length > 1) {
   const sliderDescriptions = document.querySelectorAll('.slider__description')
@@ -197,7 +199,6 @@ const switchLanguage = (lang) => {
 
   localStorage.setItem('lang', lang)
 }
-
 
 enSwitchers.forEach((el) => {
   el.addEventListener('click', () => {

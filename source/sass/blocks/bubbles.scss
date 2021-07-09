@@ -30,7 +30,11 @@
 
   &-1 {
     margin-left: -6px;
-    animation: toRight 10s linear infinite;
+    animation: line1 10s linear infinite;
+
+    @media (min-width: $tablet-width) {
+      animation: toLeft 10s linear infinite;
+    }
 
     @media (min-width: $desktop-width) {
       margin-left: -111px;
@@ -49,7 +53,12 @@
 
   &-2 {
     margin-left: -80px;
-    animation: toLeft 10s linear infinite;
+    animation: line2 20s linear infinite;
+    transition: transform 3s;
+
+    @media (min-width: $tablet-width) {
+      animation: toLeft 10s linear infinite;
+    }
 
     @media (min-width: $desktop-width) {
       margin-left: 131px;
@@ -68,7 +77,11 @@
 
   &-3 {
     margin-left: 134px;
-    animation: toRight 10s linear infinite;
+    animation: line3 20s linear infinite;
+
+    @media (min-width: $tablet-width) {
+      animation: toRight 10s linear infinite;
+    }
 
     @media (min-width: $desktop-width) {
       margin-left: -100px;
@@ -87,7 +100,11 @@
 
   &-4 {
     margin-left: -77px;
-    animation: toLeft 10s linear infinite;
+    animation: line4 17s linear infinite;
+
+    @media (min-width: $tablet-width) {
+      animation: toLeft 10s linear infinite;
+    }
 
     @media (min-width: $desktop-width) {
       margin-left: 107px;
@@ -106,7 +123,11 @@
 
   &-5 {
     margin-left: 93px;
-    animation: toRight 10s linear infinite;
+    animation: line5 10s linear infinite;
+
+    @media (min-width: $tablet-width) {
+      animation: toRight 10s linear infinite;
+    }
 
     @media (min-width: $desktop-width) {
       margin-left: -22px;
@@ -156,17 +177,13 @@
   }
 }
 
-@keyframes toLeft {
+@keyframes line1 {
   0% {
     transform: translateX(-50%);
   }
 
-  25% {
+  50% {
     transform: translateX(-53%);
-  }
-
-  70% {
-    transform: translateX(-43%);
   }
 
   100% {
@@ -174,16 +191,27 @@
   }
 }
 
-@keyframes toRight {
+@keyframes line2 {
   0% {
     transform: translateX(-50%);
   }
 
-  25% {
-    transform: translateX(-47%);
+  50% {
+    transform: translateX(-45%);
   }
 
-  70% {
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+@keyframes line3 {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  50% {
     transform: translateX(-57%);
   }
 
@@ -192,6 +220,33 @@
   }
 }
 
+@keyframes line4 {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  50% {
+    transform: translateX(-45%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes line5 {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  50% {
+    transform: translateX(-55%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 @media (min-width: $tablet-width) {
   @keyframes toLeft {
