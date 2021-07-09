@@ -100,7 +100,7 @@
 
   &-4 {
     margin-left: -77px;
-    animation: line4 17s linear infinite;
+    animation: line4 20s linear infinite;
 
     @media (min-width: $tablet-width) {
       animation: toLeft 10s linear infinite;
@@ -123,7 +123,7 @@
 
   &-5 {
     margin-left: 93px;
-    animation: line5 10s linear infinite;
+    animation: line5 20s linear infinite;
 
     @media (min-width: $tablet-width) {
       animation: toRight 10s linear infinite;
