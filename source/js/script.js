@@ -221,7 +221,7 @@ function callback () {
 
   const dict = localStorage.getItem('lang') === 'en' ? engDictionary : ruDictionary
   let settings = {
-    async: true,
+    async: false,
     type: 'GET',
     url: 'https://data.waym.app/common/feedback',
     data: {
