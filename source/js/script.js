@@ -1,5 +1,14 @@
 const sliderVideos = document.querySelectorAll('.slider__video')
 
+sliderVideos.forEach((el) => {
+  el.addEventListener('touchstart', () => {
+    el.pause();
+    el.addEventListener('touchend', () => {
+      el.play();
+    })
+  })
+})
+
 if (sliderVideos.length > 1) {
   const sliderDescriptions = document.querySelectorAll('.slider__description')
 
@@ -88,7 +97,7 @@ const engDictionary = {
   youChoose: 'You can choose <br> what suits you best',
   // Текст с Главной (Написать свой квест и заработать на этом.Если ты напишешь интересный квест — сразу переведём деньги!)
   activitySendUs: 'Write your own quest <br> and make money with it. <br> If you create <br> an interesting quest, <br> we&#39;ll send you <br> money <br> right away!',
-   // Тексты в слайдере
+  // Тексты в слайдере
   weWillWrite: 'We will write a unique quest especially for you',
   gamesBring: 'Games bring positive emotions &nbsp; <br> because of which the average check grows',
   questKnows: 'The quest knows how to determine the location of the player <br> - we can bring him to you!',
