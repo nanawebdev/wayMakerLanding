@@ -1,0 +1,106 @@
+.feedback__input {
+  border: 2px solid $background-color-2;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 120px;
+  padding-bottom: 58px;
+  padding-top: 28px;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
+  color: $light-black;
+  outline: none;
+  margin-top: -40px;
+
+  &::placeholder {
+    color: rgba(40, 40, 44, 0.5);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    transition: opacity 0.3s;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+  }
+
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+
+  &:nth-child(2) {
+    margin-bottom: -10px;
+  }
+
+  &:nth-child(3) {
+    padding: 28px 24px 28px 38px;
+    border-radius: 20px;
+    height: 80px;
+
+    @media (min-width: $desktop-width) {
+      height: 120px;
+    }
+  }
+}
+
+.feedback fieldset {
+  border: none;
+  position: relative;
+  padding: 0 8px;
+  margin: 0;
+  margin-top: 8px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.feedback__submit {
+  height: 80px;
+  width: 100%;
+  background-color: $light-blue;
+  border: none;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.feedback__submit-name {
+  color: rgba($basic-white, 0.5);
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Roboto", sans-serif;
+
+  &:hover {
+    color: $basic-white;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback fieldset {
+    padding: 0;
+    margin: 0;
+  }
+
+  .feedback__input {
+    height: 160px;
+    padding-top: 16px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    white-space: normal;
+    padding-left: 38px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+  }
+
+  textarea.feedback__input {
+    padding-top: 45px;
+  }
+}

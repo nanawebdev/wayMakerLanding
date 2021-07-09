@@ -1,0 +1,18 @@
+header.main-header(class=pageClass)
+  .video
+    video.video__media(autoplay, muted, loop, playsinline, preload="auto", src="./media/PROMO.mp4", type="video/mp4")
+  .container.wrapper
+    .main-header__wrapper
+      svg.logo-icon(width='64' height='64')
+        use(xlink:href='img/sprite.svg#logo')
+
+      .header__links-wrapper
+        a.market-link(href='https://play.google.com/store/apps/details?id=ru.waymaker.app&hl=ru')
+          svg.market-icon(width='24' height='24')
+            use(xlink:href='img/sprite.svg#googleplay')
+
+      include language-switcher
+
+    h2.main-header__title(text=headerTitle.key)= headerTitle.text
+
+    include top-navigation

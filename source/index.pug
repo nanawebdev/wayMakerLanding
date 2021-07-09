@@ -1,0 +1,53 @@
+extends pug/_layout.pug
+
+block vars
+  -
+    var topNavLinks = [
+      {link: 'https://web.waym.app/quests', name: 'Перейти к квестам' , key: 'goToQuests'},
+      {link: 'https://web.waym.app/quests', name: 'Квесты', key : 'quests'},
+      {link:'./business.html', name:'Бизнесу', key: 'business'}
+    ]
+    var bottomNavLinks = [
+      {link: 'https://web.waym.app/quests', name: 'Перейти к квестам', key: 'goToQuests'},
+      {link: './business.html', name: 'Бизнесу', key: 'business'},
+      {link: './terms.html', name: 'Соглашения', key : 'conditions'}
+    ]
+
+    var headerTitle = {text: 'Развлечение нового формата', key: 'headerTitleIndex'}
+    var contentTitle = {text: 'Гляди, что у нас уже есть', key: 'contentTitle'}
+    var contentTopText = {text: 'Проходи квесты <br>не выходя из дома', key: 'contentTopText'}
+    var contentMiddleText = {text: 'А если тебе не сидится на <br>  месте, <br> то смотри вот сюда', key : 'contentMiddleText' }
+
+block content
+  .main 
+    .about
+      .container.wrapper
+        .about__title
+          span(text="imagineThat") Представь, что 
+          img.about__gif.about__gif--circle(src="./media/man.gif", alt="Парень")
+          span(text="hit") попал 
+          br
+          img.about__gif.about__gif--oval(src="./media/falling-man.gif")
+          span(text="intoThePlot") в сюжет 
+          br
+          span(text="incredible") невероятной 
+          br
+          span(text="story") истории 
+          span.about__dots ... 
+          span(text="through") через 
+          br
+          span(text="yourSmartphone") телефон 
+          span.about__gif.about__gif--border
+            img.about__gif--circle(src="./media/woman.gif", alt="Девушка")
+
+        p.about__description(text="aboutDescription") 
+          | Читаешь такой себе текст на экране,  
+          br
+          | нажимаешь 
+          br
+          | на него — а сюжет  
+          br 
+          | разворачивается в реальной жизни!
+        
+      include pug/activity
+      include pug/content

@@ -1,18 +1,38 @@
+html,
+body,
+.wrapper,
+.container,
+.main-header {
+  height: 100%;
+}
+
 .wrapper {
   width: 100%;
+  margin: 0 auto;
+  max-width: $desktop-width;
 }
 
 .container {
-  margin: 0 auto;
-  width: 100%;
   padding-left: 32px;
   padding-right: 32px;
   overflow: hidden;
 }
 
+@media (max-width: 320px) {
+  .content .container {
+    padding: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .container {
-    width: $desktop-width;
     padding-left: 120px;
     padding-right: 120px;
   }

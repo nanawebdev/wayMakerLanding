@@ -1,0 +1,150 @@
+.top-navigation__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  // padding-bottom: 32px;
+  padding-bottom: 62px;
+  padding-top: 24px;
+}
+
+.top-navigation__item {
+  padding-right: 37px;
+  position: relative;
+  white-space: nowrap;
+
+  &:last-child {
+    color: rgba($basic-white, 0.5);
+    align-items: center;
+    padding-right: 0;
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+  }
+}
+
+.top-navigation__link {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: $dark-cian;
+}
+
+.top-navigation__item:nth-child(1) {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.top-navigation__item:nth-child(2) {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.top-navigation__item:nth-child(1)::after,
+.top-navigation__item:nth-child(2)::after,
+.top-navigation__item:nth-child(3)::after {
+  content: "/";
+  position: absolute;
+  top: 0;
+  right: 24px;
+  color: rgba($basic-white, 0.12);
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.top-navigation__change-lng {
+  background-color: transparent;
+  border: none;
+  color: $basic-white;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.business-page .top-navigation {
+  padding-top: 38px;
+}
+
+.business-page .top-navigation__list {
+  padding-top: 0;
+}
+
+.business-page .top-navigation__market-link {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .top-navigation__link {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .top-navigation__item:nth-child(4) {
+    display: none;
+  }
+
+  .top-navigation__item {
+    padding-right: 56px;
+  }
+
+  .top-navigation__list {
+    padding-top: 36px;
+    padding-bottom: 80px;
+  }
+
+  .top-navigation__market-link {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .top-navigation {
+    padding: 0;
+  }
+
+  .top-navigation__list {
+    padding-bottom: 116px;
+  }
+
+  .top-navigation__item {
+    font-size: 20px;
+    line-height: 24px;
+
+    &:last-child {
+      display: flex;
+    }
+  }
+
+  .top-navigation__market-link {
+    margin-left: 2px;
+    margin-top: 4px;
+    display: block;
+  }
+
+  .top-navigation__item:nth-child(2)::after {
+    display: block;
+  }
+
+  .business-page .top-navigation {
+    padding: 0;
+  }
+
+  .business-page .top-navigation__list {
+    padding-top: 34px;
+    padding-bottom: 120px;
+  }
+}

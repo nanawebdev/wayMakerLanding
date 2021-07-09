@@ -1,0 +1,58 @@
+extends pug/_layout.pug
+block vars
+  -
+    var topNavLinks = [
+      {link: 'https://web.waym.app/quests', name: 'Перейти к квестам', key: 'goToQuests'},
+      {link: 'https://web.waym.app/quests', name: 'Квесты', key : 'quests'},
+      {link:'./', name:'Игрокам', key: 'forPlayers'}
+    ]
+
+    var bottomNavLinks = [
+       {link: 'https://web.waym.app/quests', name: 'Перейти к квестам', key: 'goToQuests'}, 
+       {link: './index.html', name: 'Игрокам', key: 'forPlayers'}, 
+       {link: './terms.html', name: 'Соглашения', key : 'conditions'}
+    ]
+
+    var headerTitle = {text:'Бизнес - как игра', key: 'headerTitleBusiness'}
+    var examplesTitle = {text: 'Примеры геймификации', key: 'examplesTitle'}
+    var pageClass = 'business-page'
+
+block customStyles
+  style.
+    .video {
+      position: absolute;
+    }
+
+    
+block content
+  .main(class=pageClass)
+    .top-title
+      .wrapper
+        h3.top-title__text.container.wrapper(text="topTitleBusiness")
+          | Добавим игровые элементы в ваш 
+          br
+          | бизнес, тем 
+          br
+          | самым 
+          br
+          | увеличим уровень продаж, лояльность, вовлеченность 
+          br
+          | и узнаваемость бренда
+
+    include pug/slider
+
+    .send-us-title
+      .wrapper
+        p.send-us-title__text.container
+          span(text="howThatDo") Как это сделать? Очень просто, 
+          a.send-us-title__link(href="#send-us")
+            span(text="writeTo") напишите 
+          span(text="writeToUs") нам!
+            br
+          span(text="describeWishes") Опишите пожелания к сюжету, или просто расскажите 
+            br
+          span(text="aboutBusiness") про ваш бизнес - мы пришлем вам предложение за 24 часа!
+
+    include pug/bubbles
+    include pug/examples
+

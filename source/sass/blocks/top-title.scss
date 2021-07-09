@@ -1,0 +1,45 @@
+.top-title {
+  background-color: $basic-white;
+  white-space: normal;
+  padding: 40px 32px 48px 32px;
+}
+
+.top-title__text {
+  padding: 0;
+  font-size: 28px;
+  line-height: 32px;
+  color: $light-black;
+  font-weight: 700;
+  margin: 0;
+}
+
+.top-title__text br {
+  display: none;
+}
+
+.top-title__text br:nth-child(2),
+.top-title__text br:nth-child(4) {
+  display: block;
+}
+
+@media (min-width: $desktop-width) {
+  .top-title__text br:nth-child(3) {
+    display: block;
+  }
+
+  .top-title__text br:nth-child(2) {
+    display: none;
+  }
+
+  .top-title {
+    padding: 0;
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+
+  .top-title__text {
+    padding-left: 120px;
+    font-size: 40px;
+    line-height: 44px;
+  }
+}

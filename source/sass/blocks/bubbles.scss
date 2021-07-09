@@ -1,0 +1,279 @@
+.bubbles-line-wrapper {
+  position: relative;
+  height: 52px;
+
+  @media (min-width: $desktop-width) {
+    height: 76px;
+  }
+}
+
+.bubbles-section {
+  background-color: $basic-white;
+  display: grid;
+  row-gap: 8px;
+  padding-bottom: 48px;
+  overflow: hidden;
+  margin-top: -10px;
+
+  @media (min-width: $desktop-width) {
+    row-gap: 16px;
+    padding-bottom: 120px;
+  }
+}
+
+.bubbles-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  height: 100%;
+
+  &-1 {
+    margin-left: -6px;
+    animation: line1 10s linear infinite;
+
+    @media (min-width: $tablet-width) {
+      animation: toLeft 10s linear infinite;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: -111px;
+    }
+
+    .bubble {
+      background-color: $light-blue;
+      border-color: $light-blue;
+      width: 258px;
+
+      @media (min-width: $desktop-width) {
+        width: 427px;
+      }
+    }
+  }
+
+  &-2 {
+    margin-left: -80px;
+    animation: line2 20s linear infinite;
+    transition: transform 3s;
+
+    @media (min-width: $tablet-width) {
+      animation: toLeft 10s linear infinite;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 131px;
+    }
+
+    .bubble {
+      background-color: $light-pink;
+      border-color: $light-pink;
+      width: 322px;
+
+      @media (min-width: $desktop-width) {
+        width: 533px;
+      }
+    }
+  }
+
+  &-3 {
+    margin-left: 134px;
+    animation: line3 20s linear infinite;
+
+    @media (min-width: $tablet-width) {
+      animation: toRight 10s linear infinite;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: -100px;
+    }
+
+    .bubble {
+      background-color: $light-black;
+      border-color: $light-black;
+      width: 405px;
+
+      @media (min-width: $desktop-width) {
+        width: 667px;
+      }
+    }
+  }
+
+  &-4 {
+    margin-left: -77px;
+    animation: line4 20s linear infinite;
+
+    @media (min-width: $tablet-width) {
+      animation: toLeft 10s linear infinite;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 107px;
+    }
+
+    .bubble {
+      background-color: $light-purple;
+      border-color: $light-purple;
+      width: 401px;
+
+      @media (min-width: $desktop-width) {
+        width: 666px;
+      }
+    }
+  }
+
+  &-5 {
+    margin-left: 93px;
+    animation: line5 20s linear infinite;
+
+    @media (min-width: $tablet-width) {
+      animation: toRight 10s linear infinite;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: -22px;
+    }
+
+    .bubble {
+      background-color: $light-orange;
+      border-color: $light-orange;
+      width: 412px;
+
+      @media (min-width: $desktop-width) {
+        width: 678px;
+      }
+    }
+  }
+}
+
+.bubble {
+  background-color: $light-blue;
+  color: $basic-white;
+  border: 2px solid $light-blue;
+  height: 100%;
+  border-radius: 38px;
+  width: 427px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+
+  &.bubble--empty {
+    background-color: $basic-white;
+    opacity: 0.25;
+  }
+
+  & + & {
+    margin-left: 8px;
+
+    @media (min-width: $desktop-width) {
+      margin-left: 16px;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 400;
+    }
+  }
+}
+
+@keyframes line1 {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  50% {
+    transform: translateX(-53%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes line2 {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  50% {
+    transform: translateX(-45%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+@keyframes line3 {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  50% {
+    transform: translateX(-57%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes line4 {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  50% {
+    transform: translateX(-45%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes line5 {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  50% {
+    transform: translateX(-55%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  @keyframes toLeft {
+    0% {
+      transform: translateX(-50%);
+    }
+
+    50% {
+      transform: translateX(-53%);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes toRight {
+    0% {
+      transform: translateX(-50%);
+    }
+
+    50% {
+      transform: translateX(-47%);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}

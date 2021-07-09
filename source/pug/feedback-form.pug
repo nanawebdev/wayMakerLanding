@@ -1,0 +1,7 @@
+form#send-us.footer__feedback.feedback
+  fieldset
+    input.feedback__input(id='nameInput' type='text' placeholder='Имя', text='namePlaceholder', required, maxlength='50', name='userName', autocomplete='off')
+    textarea.feedback__input(id='offerInput' type='text' placeholder='Вопрос, предложение', text='questionPlaceholder', required, maxlength='1000', name='userFeedback', autocomplete='off')
+    input.feedback__input(id='emailInput'  type='email' placeholder='Email', required, maxlength='50', name='userEmail', autocomplete='email')
+    button.feedback__submit(type='submit')
+      span.feedback__submit-name(text='send') Отправить
