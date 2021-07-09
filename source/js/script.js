@@ -1,16 +1,4 @@
 const sliderVideos = document.querySelectorAll('.slider__video')
-const sliderVideoStopButton = document.querySelectorAll('.slider__video-control')
-
-
-const stopVideo = () => {
-  sliderVideoStopButton.addEventListener("touchstart", handleStart, false); {
-    sliderVideos[i].pause()
-  }
-  sliderVideoStopButton.addEventListener("touchend", handleEnd, false); {
-    sliderVideos[i].play()
-  }
-}
-
 
 if (sliderVideos.length > 1) {
   const sliderDescriptions = document.querySelectorAll('.slider__description')
@@ -27,8 +15,6 @@ if (sliderVideos.length > 1) {
       sliderVideos[nextIndex].classList.add('slider__video--current')
       sliderDescriptions[nextIndex].classList.add('slider__description--current')
       sliderVideos[nextIndex].play()
-
-      stopVideo()
     })
   }
 }
@@ -76,7 +62,7 @@ const engDictionary = {
   incredible: ' in an engaging ',
   story: ' story ',
   through: ' through ',
-  yourSmartphone: ' your phone',
+  yourSmartphone: ' your phone ',
   //
   // Описание приложения на главной (Читаешь такой себе текст на экране)
   aboutDescription: 'You are reading the text on the screen, <br> tapping on it and the plot <br> starts unfolding in the reality!',
