@@ -1,16 +1,19 @@
 const sliderVideos = document.querySelectorAll('.slider__video')
-const sliderVideoStopButton = document.querySelectorAll('.slider__video-control')
+const sliderVideoStopButton = document.getElementById('sliderButton')
 
+/**
+ * Переменная с актуальным индексом видоса из B2B карусели
+ * @type {number}
+ */
+let currentVideoIndex = 0;
 
-const stopVideo = () => {
-  sliderVideoStopButton.addEventListener("touchstart", handleStart, false); {
-    sliderVideos[i].pause()
-  }
-  sliderVideoStopButton.addEventListener("touchend", handleEnd, false); {
-    sliderVideos[i].play()
-  }
-}
+sliderVideoStopButton.addEventListener("touchstart", () => {
+  sliderVideos[currentVideoIndex].pause();
+});
 
+sliderVideoStopButton.addEventListener("touchend", () => {
+  sliderVideos[currentVideoIndex].play();
+});
 
 if (sliderVideos.length > 1) {
   const sliderDescriptions = document.querySelectorAll('.slider__description')
@@ -28,7 +31,7 @@ if (sliderVideos.length > 1) {
       sliderDescriptions[nextIndex].classList.add('slider__description--current')
       sliderVideos[nextIndex].play()
 
-      stopVideo()
+      currentVideoIndex = nextIndex;
     })
   }
 }
