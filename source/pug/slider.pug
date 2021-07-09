@@ -17,6 +17,7 @@
 .slider-wrapper
   .wrapper
     .slider
+      button.slider__video-control STOP
       .slider__videos
         for i, index in sliderVideos
           video.slider__video.video__media(autoplay, muted, playsinline,  preload="auto", poster=i.poster, class=(index === 0) ? "slider__video--current" : "")

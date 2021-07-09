@@ -1,4 +1,15 @@
 const sliderVideos = document.querySelectorAll('.slider__video')
+const sliderVideoStopButton = document.querySelectorAll('.slider__video-control')
+
+
+const stopVideo = () => {
+  sliderVideoStopButton.addEventListener("touchstart", handleStart, false); {
+    sliderVideos[i].pause()
+  }
+  sliderVideoStopButton.addEventListener("touchend", handleEnd, false); {
+    sliderVideos[i].play()
+  }
+}
 
 sliderVideos.forEach((el) => {
   el.addEventListener('touchstart', () => {
@@ -13,6 +24,7 @@ if (sliderVideos.length > 1) {
   const sliderDescriptions = document.querySelectorAll('.slider__description')
 
   sliderVideos[0].play()
+  stopVideo()
   for (let i = 0; i < 4; i++) {
     sliderVideos[i].addEventListener('ended', () => {
       sliderVideos[i].classList.remove('slider__video--current')
@@ -23,6 +35,7 @@ if (sliderVideos.length > 1) {
       sliderVideos[nextIndex].classList.add('slider__video--current')
       sliderDescriptions[nextIndex].classList.add('slider__description--current')
       sliderVideos[nextIndex].play()
+      stopVideo()
     })
   }
 }
@@ -31,6 +44,7 @@ if (sliderVideos.length === 1) {
   const sliderDescriptions = document.querySelectorAll('.slider__description')
 
   sliderVideos[0].play()
+  stopVideo()
 
   let currentDescriptionIndex = 0
 
