@@ -11,20 +11,12 @@ const stopVideo = () => {
   }
 }
 
-sliderVideos.forEach((el) => {
-  el.addEventListener('touchstart', () => {
-    el.pause();
-    el.addEventListener('touchend', () => {
-      el.play();
-    })
-  })
-})
 
 if (sliderVideos.length > 1) {
   const sliderDescriptions = document.querySelectorAll('.slider__description')
 
   sliderVideos[0].play()
-  stopVideo()
+
   for (let i = 0; i < 4; i++) {
     sliderVideos[i].addEventListener('ended', () => {
       sliderVideos[i].classList.remove('slider__video--current')
@@ -35,6 +27,7 @@ if (sliderVideos.length > 1) {
       sliderVideos[nextIndex].classList.add('slider__video--current')
       sliderDescriptions[nextIndex].classList.add('slider__description--current')
       sliderVideos[nextIndex].play()
+
       stopVideo()
     })
   }
@@ -42,18 +35,13 @@ if (sliderVideos.length > 1) {
 
 if (sliderVideos.length === 1) {
   const sliderDescriptions = document.querySelectorAll('.slider__description')
-
   sliderVideos[0].play()
-  stopVideo()
-
   let currentDescriptionIndex = 0
-
   function activateNextDescription() {
     const nextIndex = currentDescriptionIndex + 1 === 4 ? 0 : currentDescriptionIndex + 1
     sliderDescriptions[currentDescriptionIndex].classList.remove('slider__description--current')
     sliderDescriptions[nextIndex].classList.add('slider__description--current')
     currentDescriptionIndex = nextIndex
-
     setTimeout(activateNextDescription, 3000)
   }
 
