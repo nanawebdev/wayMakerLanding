@@ -1,0 +1,40 @@
+.send-us-title {
+  background-color: $basic-white;
+  padding-right: 32px;
+  padding-bottom: 58px;
+  padding-top: 48px;
+  padding-left: 0;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 120px;
+    padding-top: 80px;
+    text-align: right;
+  }
+}
+
+.send-us-title__text {
+  font-family: "Play", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: $basic-black;
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 44px;
+  }
+}
+
+.send-us-title__text br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.send-us-title__link {
+  color: $light-blue;
+  cursor: pointer;
+}

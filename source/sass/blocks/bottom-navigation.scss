@@ -1,0 +1,22 @@
+.bottom-navigation {
+  padding: 0;
+  padding-top: 44px;
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 24px;
+  }
+}
+
+.bottom-navigation__item {
+  list-style: none;
+  padding-bottom: 40px;
+}
+
+.bottom-navigation__link {
+  text-decoration: none;
+  color: $light-blue;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}

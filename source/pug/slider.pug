@@ -1,0 +1,28 @@
+-
+  var sliderVideos = [
+    {src: "./media/get_coffee.mp4", poster: "./img/get_coffee.png"},
+    {src: "./media/wow_emotion.mp4", poster: "./img/wow_emotion.png"},
+    {src: "./media/look_around.mp4", poster: "./img/look_around.png"},
+    {src: "./media/qr_scan.mp4", poster: "./img/qr_scan.png"}
+  ]
+
+  var sliderDescriptions = [
+    {description: "Напишем уникальный квест специально для вас", key: 'weWillWrite'},
+    {description: "Игры приносят положительные эмоции,&nbsp;<br>из-за чего растет средний чек", key: 'gamesBring'},
+    {description: "Квест умеет определять локацию игрока <br> — можем привести его к вам!", key: 'questKnows'},
+    {description: "Обыграем особенности локации, и создадим <br> дополнительную стоимость без вложений в инфраструктуру", key: 'wePlayWithLocation'}
+  ]
+
+
+.slider-wrapper
+  .wrapper
+    .slider
+      button.slider__video-control STOP
+      .slider__videos
+        for i, index in sliderVideos
+          video.slider__video.video__media(autoplay, muted, playsinline,  preload="auto", poster=i.poster, class=(index === 0) ? "slider__video--current" : "")
+            source(src=i.src)
+
+      ul.slider__descriptions
+        for i, index in sliderDescriptions
+          li.slider__description(text=i.key, class=(index === 0) ? "slider__description--current" : "") !{i.description}

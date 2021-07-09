@@ -1,0 +1,20 @@
+-
+  var bubblesTexts = [
+    {text: "добавить эмоций в процесс покупки", key: 'addEmotion'},
+    {text: "донести обучающий материал в игровой форме", key: 'deliver'},
+    {text: "привести покупателей к точке продаж благодаря интерактиву", key: 'leadBuyers'},
+    {text: "показать клиентам все локации на определённой территории", key: 'showClients'},
+    {text: "связать имидж бренда с позитивным опытом взаимодействия", key: 'associateBrand'},
+  ]
+
+.bubbles-section
+  for bubble, index in bubblesTexts
+    .bubbles-line-wrapper
+      .bubbles-line(class=("bubbles-line-" + (index + 1)))
+        for val in [1, 2, 3]
+          .bubble--empty.bubble
+        .bubble(text=bubble.key) !{bubble.text}
+        for val in [1, 2, 3]
+          .bubble--empty.bubble
+
+

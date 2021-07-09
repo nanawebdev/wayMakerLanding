@@ -1,0 +1,30 @@
+-
+  var marketLinks = [
+    {link:"https://play.google.com/store/apps/details?id=ru.waymaker.app&hl=ru", svgLink: "./img/sprite.svg#googleplay"}
+  ]
+
+  var socialLinks = [
+    {link:"https://www.instagram.com/waymaker.official/", svgLink:"./img/sprite.svg#Instagram"},
+    {link:"https://vk.com/waym_app", svgLink:"img/sprite.svg#VK"},
+    {link:"", svgLink:"img/sprite.svg#facebook"}
+  ]
+
+.links
+  .links__wrapper
+    span(text="canDownload") можно скачать:
+    .divider
+    .links__list
+      for i in marketLinks
+        a.links__link.market-link(href=i.link)
+          svg.market-icon(width="24", height="24")
+            use(xlink:href=i.svgLink)
+  .links__wrapper
+    span(text="subscribe") и подписаться:
+    .divider
+    .links__list
+      for i in socialLinks
+        a.social-link.links__link(href=i.link)
+          svg.social-icon(width="24", height="24")
+            use(xlink:href=i.svgLink)
+     
+    

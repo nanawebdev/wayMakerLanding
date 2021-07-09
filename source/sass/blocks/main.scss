@@ -4,9 +4,14 @@
   z-index: 20;
   overflow: hidden;
 
+  @media (min-width: $tablet-width) {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
+
   @media (min-width: $desktop-width) {
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
-    margin-top: -41px;
+    margin-top: 0;
   }
 }
