@@ -26,6 +26,10 @@
   justify-content: space-between;
 }
 
+.header__links-wrapper .market-link + .market-link {
+  margin-left: 32px;
+}
+
 @media (min-width: $tablet-width) {
   .main-header .container {
     padding: 80px;
